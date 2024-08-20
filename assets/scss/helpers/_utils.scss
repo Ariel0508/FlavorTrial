@@ -1,0 +1,22 @@
+$spacer-4-5: 32px;
+
+.fz-4-5 {
+    font-size: $spacer-4-5;
+}
+
+$utilities: map-merge(
+  $utilities, (
+    "font-size": map-merge(
+      map-get($utilities, "font-size"),
+      ( responsive: true ),
+    ),
+  )
+);
+
+@import "bootstrap/scss/utilities/api";
+
+@each $color, $value in $grays {
+  .text-gray-#{$color} {
+      color: $value;
+  }
+}
