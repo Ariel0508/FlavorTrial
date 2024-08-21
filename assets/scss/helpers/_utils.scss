@@ -14,9 +14,3 @@ $utilities: map-merge(
 );
 
 @import "bootstrap/scss/utilities/api";
-
-@each $color, $value in $grays {
-  .text-gray-#{$color} {
-      color: $value;
-  }
-}
