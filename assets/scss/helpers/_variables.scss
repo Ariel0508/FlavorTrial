@@ -330,7 +330,6 @@ $theme-colors: (
   "gray-700":  $gray-700, 
   "gray-400":  $gray-400, 
   "gray-200":  $gray-200, 
-
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -423,11 +422,19 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 $spacer: 1rem !default;
 $spacers: (
   0: 0,
-  1: $spacer * .25,
-  2: $spacer * .5,
-  3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
+  1: $spacer * .25, //4
+  2: $spacer * .5, //8
+  3: $spacer, //16
+  4: $spacer * 1.5, //24
+  5: $spacer * 2, //32
+  6: $spacer * 2.5, //40
+  7: $spacer * 3, //48
+  8: $spacer * 3.5, //56
+  9: $spacer * 4, //64
+  10: $spacer * 4.5, //72
+  11: $spacer * 5, //80
+  12: $spacer * 7.5, //120
+  13: $spacer * 10, //160
 ) !default;
 // scss-docs-end spacer-variables-maps
 

@@ -1,9 +1,3 @@
-$spacer-4-5: 32px;
-
-.fz-4-5 {
-    font-size: $spacer-4-5;
-}
-
 $utilities: map-merge(
   $utilities, (
     "font-size": map-merge(
