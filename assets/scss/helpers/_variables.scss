@@ -6,16 +6,28 @@
 // Color system
 
 // scss-docs-start gray-color-variables
+// $white:    #fff !default;
+// $gray-100: #f8f9fa !default;
+// $gray-200: #eee !default;//#e9ecef !default;
+// $gray-300: #dee2e6 !default;
+// $gray-400: #c0c0c0 !default;//#ced4da !default;
+// $gray-500: #adb5bd !default;
+// $gray-600: #6c757d !default;
+// $gray-700: #484848 !default;//#495057 !default;
+// $gray-800: #343a40 !default;
+// $gray-900: #121212 !default;//#212529 !default;
+// $black:    #000 !default;
+// Ariel
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
-$gray-200: #eee !default;//#e9ecef !default;
+$gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
-$gray-400: #c0c0c0 !default;//#ced4da !default;
+$gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
 $gray-600: #6c757d !default;
-$gray-700: #484848 !default;//#495057 !default;
+$gray-700: #495057 !default;
 $gray-800: #343a40 !default;
-$gray-900: #121212 !default;//#212529 !default;
+$gray-900: #212529 !default;
 $black:    #000 !default;
 // scss-docs-end gray-color-variables
 
@@ -298,7 +310,7 @@ $cyans: (
 // fusv-enable
 
 // scss-docs-start theme-color-variables
-$primary:       #00503F!default;//$blue !default;
+$primary:       $blue !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -306,10 +318,7 @@ $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-900 !default;
-$deco-coral:    #FF814A !default;
-$deco-bright-green: #96FF00 !default;
-$deco-blue: #0000C2 !default;
-$deco-pink: #FFAB91;
+
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -322,14 +331,11 @@ $theme-colors: (
   "danger":     $danger,
   "light":      $light,
   "dark":       $dark,
-  "deco-coral": $deco-coral,
-  "deco-bright-green": $deco-bright-green,
-  "deco-blue" : $deco-blue,
-  "deco-pink": $deco-pink,
-  "gray-900":  $gray-900, 
-  "gray-700":  $gray-700, 
-  "gray-400":  $gray-400, 
-  "gray-200":  $gray-200, 
+  // Ariel
+  // "gray-900":  $gray-900, 
+  // "gray-700":  $gray-700, 
+  // "gray-400":  $gray-400, 
+  // "gray-200":  $gray-200, 
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -419,22 +425,30 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 // You can add more entries to the $spacers map, should you need more variation.
 
 // scss-docs-start spacer-variables-maps
+// Ariel
 $spacer: 1rem !default;
 $spacers: (
   0: 0,
   1: $spacer * .25, //4
   2: $spacer * .5, //8
-  3: $spacer, //16
-  4: $spacer * 1.5, //24
-  5: $spacer * 2, //32
-  6: $spacer * 2.5, //40
-  7: $spacer * 3, //48
-  8: $spacer * 3.5, //56
-  9: $spacer * 4, //64
-  10: $spacer * 4.5, //72
-  11: $spacer * 5, //80
-  12: $spacer * 7.5, //120
-  13: $spacer * 10, //160
+  3: $spacer * .0.625, //10
+  4: $spacer * 0.75,//12
+  5: $spacer, //16
+  6: $spacer * 1.25, //20
+  7: $spacer * 1.5, //24
+  8: $spacer * 1.75, //28
+  9: $spacer * 1.875, //30
+  10: $spacer * 2, //32
+  11: $spacer * 2.25, //36
+  12: $spacer * 2.5, //40
+  13: $spacer * 2.75, //44
+  14: $spacer * 3, //48
+  15: $spacer * 3.5, //56
+  16: $spacer * 4, //64
+  17: $spacer * 4.5, //72
+  18: $spacer * 5, //80
+  19: $spacer * 7.5, //120
+  20: $spacer * 10, //160
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -642,7 +656,8 @@ $font-weight-normal:          400 !default;
 $font-weight-medium:          500 !default;
 $font-weight-semibold:        600 !default;
 $font-weight-bold:            700 !default;
-$font-weight-bolder:          bolder !default;
+// $font-weight-bolder:          bolder !default;
+$font-weight-bolder:          900 !default;//custom
 
 $font-weight-base:            $font-weight-normal !default;
 
@@ -690,8 +705,10 @@ $display-font-sizes: (
 
 $display-font-family: null !default;
 $display-font-style:  null !default;
-$display-font-weight: 300 !default;
-$display-line-height: $headings-line-height !default;
+// $display-font-weight: 300 !default;
+$display-font-weight: 900 !default; //custom
+// $display-line-height: $headings-line-height !default;
+$display-line-height: 1 !default; //custom
 // scss-docs-end display-headings
 
 // scss-docs-start type-variables
@@ -806,11 +823,15 @@ $table-variants: (
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
 // scss-docs-start input-btn-variables
-$input-btn-padding-y:         .375rem !default;
-$input-btn-padding-x:         .75rem !default;
+// $input-btn-padding-y:         .375rem !default;
+$input-btn-padding-y:         0.625rem !default;//custom
+// $input-btn-padding-x:         .75rem !default;
+$input-btn-padding-x:         1.5rem !default;//custom
 $input-btn-font-family:       null !default;
 $input-btn-font-size:         $font-size-base !default;
-$input-btn-line-height:       $line-height-base !default;
+// $input-btn-line-height:       $line-height-base !default;
+$input-btn-line-height:       1.2 !default;//custom
+
 
 $input-btn-focus-width:         $focus-ring-width !default;
 $input-btn-focus-color-opacity: $focus-ring-opacity !default;
@@ -853,7 +874,8 @@ $btn-font-size-lg:            $input-btn-font-size-lg !default;
 
 $btn-border-width:            $input-btn-border-width !default;
 
-$btn-font-weight:             $font-weight-normal !default;
+// $btn-font-weight:             $font-weight-normal !default;
+$btn-font-weight:             $font-weight-bold !default;//custom
 $btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
 $btn-focus-width:             $input-btn-focus-width !default;
 $btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
