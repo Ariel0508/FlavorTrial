@@ -2,6 +2,24 @@
     max-width: 100%;
 }
 
+.foodtalk-cover {
+    // transition: 1s;
+
+    .foodtalk-back {
+        display: none;
+    }
+
+    &:hover {
+        .foodtalk-back {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $primary;
+            transition: 1s;
+        }
+    }
+}
+
 .foodtalk-hr {
     display: inline-block;
     position: relative;
@@ -24,13 +42,4 @@
     & h3::after {
         right: -26px;
     }
-}
-
-.foodtalk-back {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    background-color: $primary;
 }
