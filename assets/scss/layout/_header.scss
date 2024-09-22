@@ -6,7 +6,24 @@
         flex-grow: 0;
     }
 
-    &-link {
+    .nav-link {
         font-weight: 700;
+        color: black;
+        line-height: 120%;
     }
+   
+    .nav-item {
+        height: 40px;
+    }
+
+    .nav-item-btn {
+        transition: background-color 0.1s ease, color 0.1s ease;
+        &:hover {
+            background-color: black;
+            color: white;
+        }
+    }
+}
+#navbar {
+    transition: top 0.3s;
 }
