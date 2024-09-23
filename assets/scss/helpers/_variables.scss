@@ -20,15 +20,19 @@
 // Ariel
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
+// $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
+// $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
 $gray-600: #6c757d !default;
-$gray-700: #495057 !default;
+// $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
-$gray-900: #212529 !default;
+// $gray-900: #212529 !default;
 $black:    #000 !default;
+$gray-200: #eeeeee;
+$gray-400: #c0c0c0;
+$gray-700: #484848;
+$gray-900: #121212;
 // scss-docs-end gray-color-variables
 
 // fusv-disable
@@ -431,7 +435,7 @@ $spacers: (
   0: 0,
   1: $spacer * .25, //4
   2: $spacer * .5, //8
-  3: $spacer * .0.625, //10
+  3: $spacer * 0.625, //10
   4: $spacer * 0.75,//12
   5: $spacer, //16
   6: $spacer * 1.25, //20
@@ -469,8 +473,8 @@ $position-values: (
 // Settings for the `<body>` element.
 
 $body-text-align:           null !default;
-$body-color:                $gray-900 !default;
-$body-bg:                   $white !default;
+$body-color:                #121212; //$gray-900 !default; CUSTOM
+$body-bg:                   #eeeeee !default;//$white !default; CUSTOM
 
 $body-secondary-color:      rgba($body-color, .75) !default;
 $body-secondary-bg:         $gray-200 !default;
@@ -857,6 +861,8 @@ $input-btn-border-width:      var(--#{$prefix}border-width) !default;
 // For each of Bootstrap's buttons, define text, background, and border color.
 
 // scss-docs-start btn-variables
+//
+// $btn-color:                   var(--#{$prefix}body-color) !default;
 $btn-color:                   var(--#{$prefix}body-color) !default;
 $btn-padding-y:               $input-btn-padding-y !default;
 $btn-padding-x:               $input-btn-padding-x !default;
