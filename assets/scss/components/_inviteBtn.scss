@@ -1,0 +1,17 @@
+    
+.invite-btn {
+    width: 80px;
+    height: 80px;
+    background:  $gray-200;
+    border: 4px solid $primary;
+    path {
+    stroke: $primary;
+    }
+    &:hover {
+        background: $primary;
+            path {
+            stroke: $primary;
+            stroke: #fff;
+        }
+    }
+}
