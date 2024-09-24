@@ -1,4 +1,4 @@
-.shadows {
+.dropdown-shadows {
     box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.15), 0 2px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
@@ -8,4 +8,8 @@
 
 .btn:first-child:active {
     border-color: #fff;
+}
+
+.dropdown-btn {
+    border-radius: 8px;
 }
