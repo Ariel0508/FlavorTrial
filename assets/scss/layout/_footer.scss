@@ -1,6 +1,13 @@
 .footer {
 
-    ul a {
-        line-height: 120%;
+    .slogan {
+        margin-bottom: 200px;
+    }
+
+    &-logo img {
+        width: 306px;
+        @include media-breakpoint-down(md) {
+            width: 200px;
+        }
     }
 }
