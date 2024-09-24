@@ -85,6 +85,11 @@
     .offcanvas-header {
         margin-bottom: 76px;   
     }
+
+    .dropdown-toggle::after {
+        content: "";
+        display: none;
+    }
 }
 
 .search {
