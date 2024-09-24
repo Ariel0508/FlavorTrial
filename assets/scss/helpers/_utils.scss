@@ -22,6 +22,11 @@ $utilities: map-merge(
       map-get($utilities, "border-bottom"),
       (responsive: true),
     ),
+
+    "border-color": map-merge(
+      map-get($utilities, "border-color"),
+      (responsive: true),
+    ),
   )
 );
 
