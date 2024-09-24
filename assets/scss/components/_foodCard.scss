@@ -1,24 +1,25 @@
 .foodCard {
-display: block;
+    display: block;
+
     .card-hover {
-    display: none;
+        opacity: 0;
+        visibility: hidden;
+        transition:opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        
     }
 
     &:hover {
         .card-hover {
+            opacity: 1;
+            visibility: visible;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            transition: all 0.3s ease-in-out;
         }
     }
 }
 
-
-.foodCard-title {
-    line-height: 1.2;
-}
 .foodCard-icon {
     width: 80px;
     height: 80px;
