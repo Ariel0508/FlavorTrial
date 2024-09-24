@@ -1,9 +1,9 @@
-<nav class="d-none navbar navbar-expand-lg py-lg-0 position-fixed w-100" id="navbar">
+<nav class="navbar navbar-expand-lg top-auto py-lg-0 position-fixed w-100" id="navbar">
     <div class="container">
-        <a class="navbar-brand d-flex py-lg-0" href="#">
+        <a class="navbar-brand d-flex py-lg-0 d-lg-block d-none" href="index.html">
             <img src="/assets/images/Logo-navbar.svg" alt="logo">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -15,7 +15,37 @@
                     <a class="nav-link py-lg-3 px-lg-5" href="#">關於我們</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link p-lg-2" href="#">
+                    <a class="nav-link p-lg-2 search-icon" href="#" type="button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 21L16.7 16.7M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </li>
+                <li class="nav-item border border-black" id="auth-button">
+                    <a href="login.html" class="nav-link nav-item-btn py-lg-3 px-lg-5">登入/註冊</a>
+                </li>
+            </ul>
+        </div> -->
+
+        <button class="navbar-toggler navbar-toggler-custom p-10 rounded-start-3" type="button" data-bs-toggle="offcanvas" href="#offcanvasNav" role="button" aria-controls="offcanvasNav" id="navbarToggler">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="burgerIcon">
+                <path d="M4 12H20M4 6H20M4 18H20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="closeIcon" class="d-none">
+                <path d="M18 6L6 18M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>     
+        </button>
+        <!-- 電腦版 -->
+        <div class="d-lg-block d-none">
+            <ul class="navbar-nav py-lg-7 mb-2 mb-lg-0 gap-lg-7">
+                <li class="nav-item">
+                    <a class="nav-link py-lg-3 px-lg-5" href="#">所有貼文</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link py-lg-3 px-lg-5" href="#">關於我們</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-lg-2 search-icon" href="#" type="button">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M21 21L16.7 16.7M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -26,62 +56,108 @@
                 </li>
             </ul>
         </div>
+        <!-- 手機版 -->
+        <div class=" offcanvas offcanvas-start w-100 border-0 d-lg-none d-sm-block" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
+            <div class="offcanvas-header d-flex justify-content-between">
+                <h1 class="offcanvas-title" id="offcanvasNavLabel">
+                    <a href="index.html">
+                        <img src="/assets/images/Logo-navbar.svg" alt="logo">
+                    </a>
+                </h1>
+                <div class="nav-item border border-black auth-button" id="auth-button">
+                    <a href="login.html" class="nav-link nav-item-btn py-3 px-5">登入/註冊</a>
+                </div>
+            </div>
+            <ul class="offcanvas-body navbar-nav vh-100 py-lg-7 mb-2 mb-lg-0 gap-lg-7">
+                <li class="nav-item mb-10">
+                    <h2 class="fs-1 fw-bold">
+                        <a class="nav-link" href="#">附近美味</a>
+                    </h2>
+                </li>
+                <li class="nav-item mb-10">
+                    <h2 class="fs-1 fw-bold">
+                        <a class="nav-link" href="#">分享美味</a>
+                    </h2>
+                </li>
+                <li class="nav-item mb-10">
+                    <h2 class="fs-1 fw-bold">
+                        <a class="nav-link" href="#">所有貼文</a>
+                    </h2>
+                </li>
+                <li class="nav-item">
+                    <h2 class="fs-1 fw-bold">
+                        <a class="nav-link" href="#">關於我們</a>
+                    </h2>
+                </li>
+            </ul>
+        </div>
+
     </div>
 </nav>
 
-<div class="search">
-    <div class="search-bar flex-shrink-0 align-items-center">
-        <div class="container d-flex justify-content-between">
-            <a class="navbar-brand d-flex py-0" href="#">
-                <img src="/assets/images/Logo-navbar.svg" alt="logo">
-            </a>
-            <ul class="search-form d-flex align-items-center py-7 gap-2">
-                <li class="nav-item">
-                    <div class="input-group rounded-3">
-                        <!-- <label class="search-text" for="search">附近美味</label> -->
-                        <input class="form-control py-2 px-5" type="text" name="search" id="search" placeholder="附近美味">
-                        <a href="#" class="input-group-text py-2 ps-0 pe-5">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M21 21L16.7 16.7M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                    </div>
+<div class="search d-none">
+    <div class="search-background">
+    <div class="search-bar container d-flex align-items-center">
+        <a class="navbar-brand d-flex flex-shrink-0 py-0" href="index.html">
+            <img src="/assets/images/Logo-navbar.svg" alt="logo">
+        </a>
+        <div class="search-content d-flex justify-content-between me-7 ms-auto">
+            <ul class="search-form d-flex align-items-center justify-content-end py-7 gap-2 ms-auto">
+                <li class="input-group rounded-3">
+                    <input class="form-control search-input py-3 px-5 flex-grow-1" type="text" name="search" placeholder="附近美味">
+                    <a href="#" class="input-group-text border-0 bg-transparent py-2 ps-0 pe-5">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 21L16.7 16.7M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
                 </li>
                 <li class="dropdown">
-                    <button class="nav-link py-2 px-5 rounded-3 bg-white text-gray-900" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="nav-link dropdown-btn d-flex align-items-center py-2 ps-5 pe-2 rounded-3 bg-white text-gray-900" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         地理位置
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="ms-5">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="ms-5 dropdown-arrow">
                             <path d="M6 9L12 15L18 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>                            
                     </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <ul class="dropdown-menu custom-dropdown-menu">
+                        <li><a class="dropdown-item" href="#">臺北市</a></li>
+                        <li><a class="dropdown-item" href="#">新北市</a></li>
+                        <li><a class="dropdown-item" href="#">桃園市</a></li>
+                        <li><a class="dropdown-item" href="#">臺中市</a></li>
+                        <li><a class="dropdown-item" href="#">臺南市</a></li>
+                        <li><a class="dropdown-item" href="#">高雄市</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <button class="nav-link py-2 px-5 rounded-3 bg-white text-gray-900" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="nav-link dropdown-btn d-flex align-items-center py-2 ps-5 pe-2 rounded-3 bg-white text-gray-900" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         美食類型
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="ms-5">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="ms-5 dropdown-arrow">
                             <path d="M6 9L12 15L18 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>                            
                     </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <ul class="dropdown-menu custom-dropdown-menu">
+                        <li><a class="dropdown-item" href="#">主食</a></li>
+                        <li><a class="dropdown-item" href="#">甜點</a></li>
+                        <li><a class="dropdown-item" href="#">飲料</a></li>
+                        <li><a class="dropdown-item" href="#">水果</a></li>
+                        <li><a class="dropdown-item" href="#">零食</a></li>
+                        <li><a class="dropdown-item" href="#">熟食</a></li>
+                        <li><a class="dropdown-item" href="#">未烹飪食材</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
-    </div>
-    <div class="container close-btn justify-content-end">close</div>
+        <a class="close-btn d-flex flex-column align-items-center justify-content-center ms-2 bg-black rounded-bottom-3 text-white fw-bold">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="mb-2">
+                <path d="M18 6L6 18M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            關閉
+        </a>
+    </div></div>
 </div>
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        // 向下滾動 - 隱藏 navbar & 向上滾動 - 顯示 navbar
+        /* 向下滾動 - 隱藏 navbar & 向上滾動 - 顯示 navbar */
         let lastScrollTop = 0;
         const navbar = document.getElementById('navbar');
 
@@ -96,7 +172,7 @@
             lastScrollTop = scrollTop;
         });
 
-        // 模擬登入後「登入/註冊」按鈕變成「我的帳號」下拉選單
+        /* 模擬登入後「登入/註冊」按鈕變成「我的帳號」下拉選單 */
         // 檢查 localStorage 中是否有「已登入」狀態
         let isLoggedIn = localStorage.getItem('loggedIn');
 
@@ -105,16 +181,20 @@
         if (isLoggedIn) {
             // 如果已登入，替換為「我的帳號」下拉選單
             authButton.innerHTML = `
-                <div class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle py-lg-3 px-lg-5" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle dropdown-btn py-lg-3 px-lg-5  position-relative" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         我的帳號
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-circle bg-primary p-1">
+                            <span class="visually-hidden">unread messages</span>
+                        </span>
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="accountDropdown">
-                        <li><a class="dropdown-item" href="#">個人資料</a></li>
-                        <li><a class="dropdown-item" href="#">設定</a></li>
+                    <ul class="dropdown-menu nav-dropdown-menu" aria-labelledby="accountDropdown">
+                        <li><a class="dropdown-item" href="#">我的主頁</a></li>
+                        <li><a class="dropdown-item" href="#">我的發文</a></li>
+                        <li><a class="dropdown-item" href="#">全部通知</a></li>
                         <li><a class="dropdown-item" href="#" id="logout">登出</a></li>
                     </ul>
-                </div>
+                </li>
             `;
 
             // 登出邏輯
@@ -128,6 +208,43 @@
                 localStorage.setItem('loggedIn', true);
             });
         }
+
+        /* 下拉選單上下箭頭 */
+        const dropdownButtons = document.querySelectorAll('.dropdown-btn');
+        
+        dropdownButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const dropdownArrow = event.currentTarget.querySelector('.dropdown-arrow');
+                dropdownArrow.classList.toggle('flip-arrow');
+            });
+        })
+
+        /* 切換搜尋欄 */
+        const searchIcon = document.querySelector('.search-icon');
+        const searchBar = document.querySelector('.search');
+        const closeBtn = document.querySelector('.close-btn');
+
+        searchIcon.addEventListener('click', function () {
+            searchBar.classList.remove('d-none');  // 顯示搜尋欄
+            navbar.classList.add('d-none');  // 隱藏導航欄
+        });
+
+        closeBtn.addEventListener('click', function () {
+            searchBar.classList.add('d-none');  // 隱藏搜尋欄
+            navbar.classList.remove('d-none');  // 顯示導航欄
+        });
+
+        /* 切換漢堡圖標和關閉圖標 */
+        const navbarToggler = document.getElementById('navbarToggler');
+        const burgerIcon = document.getElementById('burgerIcon');
+        const closeIcon = document.getElementById('closeIcon');
+
+        navbarToggler.addEventListener('click', function () {
+            burgerIcon.classList.toggle('d-none');
+            closeIcon.classList.toggle('d-none');
+            navbarToggler.classList.toggle('toggled');
+        });
+
     });
 
     
