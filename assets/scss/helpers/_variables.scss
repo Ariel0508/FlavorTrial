@@ -17,18 +17,22 @@
 // $gray-800: #343a40 !default;
 // $gray-900: #121212 !default;//#212529 !default;
 // $black:    #000 !default;
-// Ariel
-$white: #fff !default;
+// CUSTOM
+$white:    #fff !default;
 $gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
+// $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
+// $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
 $gray-600: #6c757d !default;
-$gray-700: #495057 !default;
+// $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
-$gray-900: #212529 !default;
-$black: #000 !default;
+// $gray-900: #212529 !default;
+$black:    #000 !default;
+$gray-200: #eeeeee;
+$gray-400: #c0c0c0;
+$gray-700: #484848;
+$gray-900: #121212;
 // scss-docs-end gray-color-variables
 
 // fusv-disable
@@ -286,31 +290,44 @@ $cyans: ("cyan-100": $cyan-100,
 // fusv-enable
 
 // scss-docs-start theme-color-variables
-$primary: $blue !default;
+// $primary: $blue !default;
 $secondary: $gray-600 !default;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
-$danger: $red !default;
+// $danger: $red !default;
 $light: $gray-100 !default;
 $dark: $gray-900 !default;
-
+$primary: #00503F;
+$primary-100: #EBF1F0;
+$primary-200: #99B9B2;
+$deco-green: #576E22;
+$deco-coral: #FF814A;
+$deco-bright-green: #96FF00;
+$deco-blue: #0000C2;
+$deco-pink: #FFAB91;
+$danger: #FF3A55;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
-$theme-colors: ("primary": $primary,
+$theme-colors: (
+//custom
+  "primary": $primary,
+  "primary-100": $primary-100,
+  "primary-200": $primary-200,
+  "deco-green": $deco-green,
+  "deco-coral": $deco-coral,
+  "deco-bright-green": $deco-bright-green,
+  "deco-blue": $deco-blue,
+  "deco-pink": $deco-pink,
+  "danger": $danger,
+//custom
   "secondary": $secondary,
   "success": $success,
   "info": $info,
   "warning": $warning,
-  "danger": $danger,
   "light": $light,
   "dark": $dark,
-  // Ariel
-  // "gray-900":  $gray-900, 
-  // "gray-700":  $gray-700, 
-  // "gray-400":  $gray-400, 
-  // "gray-200":  $gray-200, 
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -441,7 +458,7 @@ $position-values: (0: 0,
 
 $body-text-align: null !default;
 $body-color: $gray-900 !default;
-$body-bg: $white !default;
+$body-bg: $gray-200; //$white !default; CUSTOM
 
 $body-secondary-color: rgba($body-color, .75) !default;
 $body-secondary-bg: $gray-200 !default;
@@ -1291,7 +1308,7 @@ $dropdown-divider-margin-y: $spacer * .5 !default;
 $dropdown-box-shadow: var(--#{$prefix}box-shadow) !default;
 
 // $dropdown-link-color: var(--#{$prefix}body-color) !default;
-$dropdown-link-color: #212121; //customize
+$dropdown-link-color: #121212; //customize
 // $dropdown-link-hover-color: $dropdown-link-color !default;
 $dropdown-link-hover-color: #fff !default; //customize
 // $dropdown-link-hover-bg: var(--#{$prefix}tertiary-bg) !default;
