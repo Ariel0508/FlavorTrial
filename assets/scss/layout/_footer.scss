@@ -13,5 +13,12 @@
         margin-block-end: 0;
         
       }
-    
+
+      .bg-success {
+        @include media-breakpoint-up(lg) {
+           display: flex;
+           justify-content: end;
+           align-items: end;
+        }
+      }
 }
