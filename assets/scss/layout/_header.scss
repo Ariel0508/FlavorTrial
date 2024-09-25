@@ -103,9 +103,9 @@
     top: 0;
     left: 0;
     z-index: 1000;
-    width: 100vw;
-
+    width: 80vw;
     &-background {
+        border-radius: 0 0 8px 0;
         background-color: rgba(238, 238, 238, 0.70);
         backdrop-filter: blur(25px);
     }
@@ -123,12 +123,20 @@
     
     &-bar {
         position: relative;
+       
     }
 
     &-form {
-        width: 846px;
+        max-width: 846px;
     }
     .input-group {
+        width: 45%;
+        @include media-breakpoint-up(xxl) {
+            width: 75%;
+        }
+        @media screen and (min-width: 1920px) {
+            width: 100%;
+        }
         max-width: 590px;
         height: 40px;
         background-color: white;
@@ -171,6 +179,9 @@
     }
     
     .close-btn {
+        position: absolute;
+        top: 0;
+        right: -96px;
         width: 88px;
         height: 88px;
         line-height: 120%;
