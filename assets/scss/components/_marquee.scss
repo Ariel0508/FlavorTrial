@@ -3,15 +3,6 @@
     -webkit-text-stroke: 2px $primary;
 }
 
-.family {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.marquee {
-    max-width: 100vw;
-    overflow: hidden;
-}
-
 @keyframes marquee {
     0% {
         transform: translateX(0%)
@@ -32,39 +23,27 @@
     }
 }
 
-@keyframes marquee3 {
-    0% {
-        transform: translateX(0%)
-    }
-
-    100% {
-        transform: translateX(-100%)
-    }
-}
-
-@keyframes marquee4 {
-    0% {
-        transform: translateX(0%)
-    }
-
-    100% {
-        transform: translateX(-100%)
-    }
-}
-
-
 .marquee-scroll {
     animation: marquee 10s linear infinite;
 }
 
 .marquee-scroll2 {
-    animation: marquee2 10s linear infinite;
+    animation: marquee 10s linear infinite;
 }
 
-.marquee-scroll3 {
-    animation: marquee3 20s linear infinite;
+.marquee {
+    background-color: #fff;
+    overflow: hidden;
+    max-width: 100%;
+    white-space: nowrap;
 }
 
-.marquee-scroll4 {
-    animation: marquee4 20s linear infinite;
+.marquee-content {
+    display: flex;
+    animation: marquee 10s linear infinite;
+
+    img {
+        min-height: 160px;
+        max-height: 160px;
+    }
 }
