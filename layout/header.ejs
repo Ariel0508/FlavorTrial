@@ -1,11 +1,10 @@
-<nav class="navbar navbar-expand-lg top-auto py-lg-0 position-fixed w-100" id="navbar">
+<nav class="d-none navbar navbar-expand-lg top-auto py-lg-0 position-fixed w-100" id="navbar">
     <div class="container">
         <a class="navbar-brand d-flex py-lg-0 d-lg-block d-none" href="index.html">
             <img src="/assets/images/Logo-navbar.svg" alt="logo">
         </a>
-        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-        </button>
+        
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav py-lg-7 mb-2 mb-lg-0 gap-lg-7">
                 <li class="nav-item">
@@ -25,7 +24,7 @@
                     <a href="login.html" class="nav-link nav-item-btn py-lg-3 px-lg-5">登入/註冊</a>
                 </li>
             </ul>
-        </div> -->
+        </div>
 
         <button class="navbar-toggler navbar-toggler-custom p-10 rounded-start-3" type="button" data-bs-toggle="offcanvas" href="#offcanvasNav" role="button" aria-controls="offcanvasNav" id="navbarToggler">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="burgerIcon">
@@ -95,7 +94,7 @@
     </div>
 </nav>
 
-<div class="search d-none">
+<!-- <div class="search ">
     <div class="search-background">
     <div class="search-bar container d-flex align-items-center">
         <a class="navbar-brand d-flex flex-shrink-0 py-0" href="index.html">
@@ -152,7 +151,70 @@
             </svg>
             關閉
         </a>
-    </div></div>
+    </div>
+    </div>
+</div> -->
+
+
+<div class="search ">
+    <div class="container">
+        <div class="search-bar row flex-nowrap position-relative">
+            <a class="navbar-brand col-md-auto col-lg-3 d-flex align-items-center" href="index.html">
+                <img src="/assets/images/Logo-navbar.svg" alt="logo">
+            </a>
+            <div class="search-content col-md-auto col-lg-8">
+                <ul class="search-form d-flex gap-2 py-7">
+                    <li class="input-group rounded-3 bg-white">
+                        <input class="form-control search-input py-3 px-5 bg-white" type="text" name="search" placeholder="附近美味">
+                        <a href="#" class="input-group-text border-0 bg-transparent py-2 ps-0 pe-5">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 21L16.7 16.7M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <button class="nav-link dropdown-btn d-flex align-items-center justify-content-between py-2 ps-5 pe-2 rounded-3 bg-white text-gray-900" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            地理位置
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="ms-5 dropdown-arrow">
+                                <path d="M6 9L12 15L18 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                            
+                        </button>
+                        <ul class="dropdown-menu custom-dropdown-menu">
+                            <li><a class="dropdown-item" href="#">臺北市</a></li>
+                            <li><a class="dropdown-item" href="#">新北市</a></li>
+                            <li><a class="dropdown-item" href="#">桃園市</a></li>
+                            <li><a class="dropdown-item" href="#">臺中市</a></li>
+                            <li><a class="dropdown-item" href="#">臺南市</a></li>
+                            <li><a class="dropdown-item" href="#">高雄市</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <button class="nav-link dropdown-btn d-flex align-items-center justify-content-between py-2 ps-5 pe-2 rounded-3 bg-white text-gray-900" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            美食類型
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="ms-5 dropdown-arrow">
+                                <path d="M6 9L12 15L18 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                            
+                        </button>
+                        <ul class="dropdown-menu custom-dropdown-menu">
+                            <li><a class="dropdown-item" href="#">主食</a></li>
+                            <li><a class="dropdown-item" href="#">甜點</a></li>
+                            <li><a class="dropdown-item" href="#">飲料</a></li>
+                            <li><a class="dropdown-item" href="#">水果</a></li>
+                            <li><a class="dropdown-item" href="#">零食</a></li>
+                            <li><a class="dropdown-item" href="#">熟食</a></li>
+                            <li><a class="dropdown-item" href="#">未烹飪食材</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <a class="close-btn col-lg-1 d-flex flex-column align-items-center justify-content-center ms-2 bg-black rounded-bottom-3 text-white fw-bold">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="mb-2">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                關閉
+            </a>
+        </div>
+    </div>
 </div>
 
 <script>
