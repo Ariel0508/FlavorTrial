@@ -1,4 +1,10 @@
 .yummy {
+  .yummy-title {
+    font-size: 64px;
+    @include media-breakpoint-up(xxl) {
+      font-size: 80px;
+    }
+  }
   .deco-eyes-one {
     top: -30%;
     left: 50%;
@@ -15,6 +21,12 @@
 .deco-arrow {
   @include media-breakpoint-down(lg) {
    position: relative;
+  }
+}
+.yummy-letter-spacing {
+  letter-spacing: -2.56px;
+  @include media-breakpoint-up(xxl) {
+    letter-spacing: -3.2px;
   }
 }
 .deco-arrow-pic {
@@ -121,9 +133,9 @@
 .arrow-right {
   display: inline-block;
   position: relative;
-  width: 50%; 
-  @media screen and (min-width: 1200px) {
-    width: 60%; 
+  width: 40%; 
+  @include media-breakpoint-up(xxl) {
+    width: 55%; 
   } 
   height: 2px; 
   background-color: $deco-pink;
