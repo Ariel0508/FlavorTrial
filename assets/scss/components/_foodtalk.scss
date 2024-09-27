@@ -33,3 +33,27 @@
         object-position: left top;
     }
 }
+
+.display-lg-1 {
+    @media (min-width:768px) {
+        font-size: 80px;
+    }
+
+    span {
+        margin-left: 310px;
+    }
+}
+
+.talk-talk {
+    top: 70px;
+    left: 78px;
+    width: 189px;
+    height: 138px;
+
+    @media (min-width:768px) {
+        top: -80px;
+        left: 430px;
+        width: 288px;
+        height: 218px;
+    }
+}
