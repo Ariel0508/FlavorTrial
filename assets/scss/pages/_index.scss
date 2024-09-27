@@ -49,9 +49,11 @@
   }
   }
   .awesome-title {
-    font-size: 64px;
+     font-size: 64px;
+     letter-spacing: -2.56px;
     @include media-breakpoint-up(lg) {
       font-size: 80px;
+      letter-spacing: -3.2px;
     }
   }
   .awesome-deco {
