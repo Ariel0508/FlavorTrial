@@ -15,4 +15,21 @@
             transition: opacity .2s ease;
         }
     }
+
+}
+
+.foodtalk-img {
+    height: 416px;
+    overflow: hidden;
+
+    img {
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .zongzi {
+        object-position: left top;
+    }
 }
