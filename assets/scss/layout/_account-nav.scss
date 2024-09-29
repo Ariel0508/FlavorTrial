@@ -1,0 +1,31 @@
+.account-nav {
+    .navbar-nav {
+        width: 100%;
+    }
+    .nav-item {
+        color: $gray-700;
+        width: calc(100% / 5 - 12px);
+        .dashed-line {
+            width: 100%;
+            height: 2px;
+            background-image: linear-gradient(to right, #484848 63%, transparent 0);
+            background-size: 12px;
+            background-repeat: repeat-x;
+        }
+        &:hover { // 做到這 和下面的.active 一起
+            .dashed-line {
+
+                height: -4px;
+                background-image: linear-gradient(to right, $primary 100%, transparent 0);
+            }
+        }
+
+        .active {
+            .dashed-line {
+
+                height: -4px;
+                background-image: linear-gradient(to right, $primary 100%, transparent 0);
+            }
+        }
+    }
+}
