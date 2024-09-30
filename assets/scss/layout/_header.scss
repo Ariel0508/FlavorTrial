@@ -37,6 +37,7 @@
 
     .dropdown-btn {
         height: 40px;
+        width: 120px;
         position: relative;
         &:hover {
             background-color: $primary;
@@ -103,7 +104,7 @@
     top: 0;
     left: 0;
     z-index: 1000;
-    width: 80vw;
+    width: 85vw;
     &-background {
         border-radius: 0 0 8px 0;
         background-color: rgba(238, 238, 238, 0.70);
@@ -129,13 +130,57 @@
     &-form {
         max-width: 846px;
     }
-    .input-group {
-        width: 45%;
+    .navbar-brand-col {
+        @include media-breakpoint-up(xl) {
+            width: 3.5%;
+        }
+        @media screen and (min-width: 1280px) {
+            width: 6%;
+        }
+        @media screen and (min-width: 1366px) {
+            width: 8%;
+        }
         @include media-breakpoint-up(xxl) {
-            width: 75%;
+            width: 2.5%;
+        }
+        @media screen and (min-width: 1440px) {
+            width: 3.5%;
+        }
+        @media screen and (min-width: 1536px) {
+            width: 6.5%;
+        }
+        @media screen and (min-width: 1660px) {
+            width: 9.5%;
         }
         @media screen and (min-width: 1920px) {
-            width: 100%;
+            width: 11%;
+        }
+    }
+    .navbar-brand {
+        @media screen and (min-width: 1920px) {
+            width: 25%;
+        }
+    }
+    .search-content {
+        @media screen and (min-width: 1660px) {
+            width: 70%;
+        }
+        @media screen and (min-width: 1920px) {
+            width: 50%;
+        }
+    }
+    .input-group {
+        @include media-breakpoint-up(lg) {
+        width: 45%;
+        }
+        @include media-breakpoint-up(xl) {
+            width: 60%;
+        }
+        @media screen and (min-width: 1660px) {
+            width: 70%;
+        }
+        @media screen and (min-width: 1920px) {
+            width: 80%;
         }
         max-width: 590px;
         height: 40px;

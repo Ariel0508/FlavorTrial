@@ -97,13 +97,14 @@
 
 <div class="search">
     <div class="search-background">
-        <div class="search-bar row gap-xxl-7">
-            <a class="navbar-brand col-lg-3 col-xxl-4 d-flex align-items-center justify-content-center" href="index.html">
+        <div class="search-bar row">
+            <div class="navbar-brand-col"></div>
+            <a class="navbar-brand col-lg-3 col-xl-2 d-flex align-items-center justify-content-center px-0" href="index.html">
                 <img src="/assets/images/Logo-navbar.svg" alt="logo">
             </a>
-            <div class="col-lg-9 col-xxl-6 search-content">
-                <div class="search-form row flex-nowrap py-7">
-                    <div class="input-group col-lg-4 col-xxl-6 rounded-3">
+            <div class="col-lg-9 search-content">
+                <div class="search-form row flex-nowrap py-7 gap-2">
+                    <div class="input-group col-lg-6 rounded-3">
                         <input class="form-control search-input py-3 px-5 flex-grow-1 bg-white" type="text"
                             name="search" placeholder="附近美味">
                         <a href="#" class="input-group-text border-0 bg-transparent py-2 ps-0 pe-5">
@@ -115,7 +116,7 @@
                             </svg>
                         </a>
                     </div>
-                    <div class="dropdown col-lg-3">
+                    <div class="dropdown col-lg-3 col-xl-2 col-xxl-3 px-0">
                         <button
                             class="nav-link dropdown-btn d-flex align-items-center justify-content-between ps-5 pe-2 py-2 rounded-3 bg-white text-gray-900 w-100"
                             type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -135,11 +136,11 @@
                             <li><a class="dropdown-item" href="#">高雄市</a></li>
                         </ul>
                     </div>
-                    <div class="dropdown col-lg-3 ps-0">
+                    <div class="dropdown col-lg-3 col-xl-2 col-xxl-3 px-0">
                         <button
                             class="nav-link dropdown-btn d-flex align-items-center justify-content-between ps-5 pe-2 py-2 rounded-3 bg-white text-gray-900 w-100"
                             type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            地理位置
+                            美食類型
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow">
                                 <path d="M6 9L12 15L18 9" stroke="black" stroke-width="2" stroke-linecap="round"
@@ -175,6 +176,7 @@
         /* 向下滾動 - 隱藏 navbar & 向上滾動 - 顯示 navbar */
         let lastScrollTop = 0;
         const navbar = document.getElementById('navbar');
+        navbar.style.top = "0";
 
         window.addEventListener('scroll', function () {
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
