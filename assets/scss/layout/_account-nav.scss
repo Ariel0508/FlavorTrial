@@ -4,28 +4,34 @@
     }
     .nav-item {
         color: $gray-700;
-        width: calc(100% / 5 - 12px);
+        width: calc(100% / 5 - 19.2px); // 24 * 4 / 5
         .dashed-line {
             width: 100%;
             height: 2px;
-            background-image: linear-gradient(to right, #484848 63%, transparent 0);
-            background-size: 12px;
+            background-image: linear-gradient(to right, #484848 66%, transparent 0);
+            background-size: 13px;
             background-repeat: repeat-x;
         }
-        &:hover { // 做到這 和下面的.active 一起
+        &:hover {
+            color: $gray-900;
             .dashed-line {
-
-                height: -4px;
+                height: 4px;
                 background-image: linear-gradient(to right, $primary 100%, transparent 0);
+            }
+            svg path {
+                stroke: $gray-900;
             }
         }
 
-        .active {
-            .dashed-line {
-
-                height: -4px;
-                background-image: linear-gradient(to right, $primary 100%, transparent 0);
-            }
+    }
+    .active {
+        color: $gray-900;
+        .dashed-line {
+            height: 4px;
+            background-image: linear-gradient(to right, $primary 100%, transparent 0);
+        }
+        svg path {
+            stroke: $gray-900;
         }
     }
 }
