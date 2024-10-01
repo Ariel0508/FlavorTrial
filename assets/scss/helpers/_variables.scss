@@ -18,7 +18,7 @@
 // $gray-900: #121212 !default;//#212529 !default;
 // $black:    #000 !default;
 // CUSTOM
-$white:    #fff !default;
+$white: #fff !default;
 $gray-100: #f8f9fa !default;
 // $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
@@ -28,7 +28,7 @@ $gray-600: #6c757d !default;
 // $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 // $gray-900: #212529 !default;
-$black:    #000 !default;
+$black: #000 !default;
 $gray-200: #eeeeee;
 $gray-400: #c0c0c0;
 $gray-700: #484848;
@@ -310,8 +310,7 @@ $danger: #FF3A55;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
-$theme-colors: (
-//custom
+$theme-colors: ( //custom
   "primary": $primary,
   "primary-100": $primary-100,
   "primary-200": $primary-200,
@@ -321,7 +320,7 @@ $theme-colors: (
   "deco-blue": $deco-blue,
   "deco-pink": $deco-pink,
   "danger": $danger,
-//custom
+  //custom
   "secondary": $secondary,
   "success": $success,
   "info": $info,

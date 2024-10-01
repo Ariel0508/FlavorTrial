@@ -1,0 +1,39 @@
+.notify-cover {
+    .notify-back {
+        top: 0;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $primary;
+
+        @media (min-width:768px) {
+            flex-direction: row;
+        }
+    }
+
+    &:hover {
+        .notify-back {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity .2s ease;
+        }
+    }
+}
+
+.round-top {
+    border-radius: 8px 8px 0 0;
+}
+
+.round-bottom {
+    border-radius: 0 0 8px 8px;
+}
+
+.notifyList {
+    .unchecked {
+        background-color: rgba(0, 80, 63, 0.08);
+    }
+}
