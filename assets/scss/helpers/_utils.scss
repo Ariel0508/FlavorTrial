@@ -1,33 +1,24 @@
-$utilities: map-merge(
-  $utilities, (
-    "font-size": map-merge(
-      map-get($utilities, "font-size"),
-      ( responsive: true ),
+$utilities: map-merge($utilities, ("font-size": map-merge(map-get($utilities, "font-size"),
+      (responsive: true),
     ),
 
-    "line-height": (
-      property: line-height,
+    "line-height": (property: line-height,
       class: lh,
-      values: (
-        xs: $line-height-xs,
-      )
-    ),
+      values: (xs: $line-height-xs,
+      )),
 
-    "border-top": map-merge(
-      map-get($utilities, "border-top"),
-      (responsive: true),
-    ),
-    
-    "border-bottom": map-merge(
-      map-get($utilities, "border-bottom"),
+    "border-top": map-merge(map-get($utilities, "border-top"),
       (responsive: true),
     ),
 
-    "border-color": map-merge(
-      map-get($utilities, "border-color"),
+    "border-bottom": map-merge(map-get($utilities, "border-bottom"),
       (responsive: true),
     ),
-  )
-);
+
+    "border-color": map-merge(map-get($utilities, "border-color"),
+  (responsive: true),
+),
+
+  ));
 
 @import "bootstrap/scss/utilities/api";
