@@ -1,20 +1,52 @@
-.swiper {
-  width: 100%;
-  height: 100%;
+.intro {
+
+  &-cover {
+    min-width: 372px;
+    @include media-breakpoint-up(lg) {
+      max-width: 673px;
+    }
+  }
+  &-title {
+    h3 {
+      font-size: 64px;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -3.2px;
+      @include media-breakpoint-up(lg) {
+        font-size: 80px;
+      }
+
+    }
+  }
 }
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #d23d3d;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+// .intro-text {
+  // color: var(--Color-Aqua-deep, var(--primary-00503-f, #00503F));
+  // text-align: center;
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+  // /* .fs-5 text/Regular */
+  // // -webkit-text-stroke-width: 2px;
+  // // -webkit-text-stroke-color: var(--Color-Gallery, var(--gray-200, #EEE));
+  // font-family: "Noto Sans CJK TC";
+  // font-size: 20px;
+  // font-style: normal;
+  // font-weight: 500;
+  // line-height: 150%; /* 30px */
+  // text-shadow: 
+  //     -2px -2px 0 #EEE,  /* 左上 */
+  //     -1px -1px 0 #EEE,  /* 左上 */
+  //     2px -2px 0 #EEE,  /* 右上 */
+  //     1px -1px 0 #EEE,  /* 右上 */
+  //     -2px  2px 0 #EEE,  /* 左下 */
+  //     -1px  1px 0 #EEE,  /* 左下 */
+  //     2px  2px 0 #EEE,  /* 右下 */
+  //     1px  1px 0 #EEE,  /* 右下 */
+  //     -2px  0px 0 #EEE,  /* 左 */
+  //     -1px  0px 0 #EEE,  /* 左 */
+  //     2px  0px 0 #EEE,  /* 右 */
+  //     1px  0px 0 #EEE,  /* 右 */
+  //     0px -2px 0 #EEE,  /* 上 */
+  //     0px -1px 0 #EEE,  /* 上 */
+  //     0px  2px 0 #EEE,  /* 下 */
+  //     0px  1px 0 #EEE, /* 下 */;
+// }
