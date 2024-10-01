@@ -58,7 +58,7 @@
                 input.data('start-time', selectedTime);
                 input.text(selectedTime + ' - ');
 
-                // 清空并重新填充结束时间选项  
+                //  清空并重新填充结束时间选项  
                 var endTimeUl = $('#end-time');
                 endTimeUl.empty();
                 var [startHour, startMinute] = selectedTime.split(':').map(Number);
