@@ -34,4 +34,11 @@
             stroke: $gray-900;
         }
     }
+    .dropdown-menu[data-bs-popper] {
+        left: 23%;
+    }
+    .custom-dropdown-menu {
+        min-width: 0%;
+        width: 164px;
+    }
 }
