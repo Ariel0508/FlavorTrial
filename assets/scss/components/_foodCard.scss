@@ -1,0 +1,34 @@
+.foodCard {
+    display: block;
+
+    .card-hover {
+        opacity: 0;
+        visibility: hidden;
+        transition:opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &:hover {
+        .card-hover {
+            opacity: 1;
+            visibility: visible;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.foodCard-icon {
+    width: 80px;
+    height: 80px;
+}
+
+.multiline-ellipsis { 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+}
