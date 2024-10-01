@@ -1,0 +1,33 @@
+.custom-dropdown-menu {
+    border: none;
+    border-radius: .5rem;
+    padding: 0;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.25), 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    min-width: 100%;
+
+    .dropdown-item {
+        color: $gray-900;
+        padding: .625rem 1rem;
+        transition: background-color 0.2s ease, color 0.2s ease;
+
+        &:hover, &:focus, &:active {
+            background-color: $primary;
+            color: white;
+            svg path {
+                stroke: white;
+            }
+        }
+
+    }
+}
+
+/* 初始狀態: 向下箭頭 */
+.dropdown-arrow {
+    transform: scaleY(1);
+}
+
+/* 點擊後: 翻轉箭頭 */
+.flip-arrow {
+    transform: scaleY(-1);
+}
