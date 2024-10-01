@@ -1,0 +1,15 @@
+.footer {
+    &-logo img {
+        width: 306px;
+        @include media-breakpoint-down(md) {
+            width: 200px;
+        }
+    }
+
+    .vertical-text {
+        writing-mode: vertical-rl; 
+        text-orientation: upright;
+        margin-block-start: 0;
+        margin-block-end: 0;
+      }
+}

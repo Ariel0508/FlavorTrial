@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dropdown</title>
+</head>
+
+<body>
+    <!-- 1. 外容器 d-flex 是為了示範要加這個， dropdown 選單 ul 寬度才會與 button 同寬 -->
+    <!-- 2. dropdown button 如有必要需自行調整間距、寬度、背景顏色等。 -->
+    <!-- 3. dropdown button 背景顏色 gray-200 跟 body 背景一樣所以看不見 -->
+     
+    <div class="d-flex">
+        <!-- dropdown component start -->
+        <div class="dropdown position-relative">
+            <button class="dropdown-btn d-flex align-items-center justify-content-between py-2 ps-5 pe-2 rounded-3 bg-white border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                地理位置
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="ms-5 dropdown-arrow">
+                    <path d="M6 9L12 15L18 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                            
+            </button>
+            <ul class="dropdown-menu custom-dropdown-menu">
+                <li><a class="dropdown-item" href="#">臺北市</a></li>
+                <li><a class="dropdown-item" href="#">新北市</a></li>
+                <li><a class="dropdown-item" href="#">桃園市</a></li>
+                <li><a class="dropdown-item" href="#">臺中市</a></li>
+                <li><a class="dropdown-item" href="#">臺南市</a></li>
+                <li><a class="dropdown-item" href="#">高雄市</a></li>
+            </ul>
+        </div>
+        <!-- dropdown component end -->
+
+        <!-- dropdown component with icon start -->
+        <div class="dropdown position-relative">
+            <button class="dropdown-btn d-flex align-items-center justify-content-between py-2 ps-5 pe-2 rounded-3 bg-white border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                有icon的下拉選單
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="ms-5 dropdown-arrow">
+                    <path d="M6 9L12 15L18 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                            
+            </button>
+            <ul class="dropdown-menu custom-dropdown-menu">
+                <li class="d-flex">
+                    <a class="dropdown-item d-flex align-items-center gap-2" href="#">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 21V19C19 17.9391 18.5786 16.9217 17.8284 16.1716C17.0783 15.4214 16.0609 15 15 15H9C7.93913 15 6.92172 15.4214 6.17157 16.1716C5.42143 16.9217 5 17.9391 5 19V21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        個人設定
+                    </a>
+                </li>
+                <li class="d-flex">
+                    <a class="dropdown-item d-flex align-items-center gap-2" href="#">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 21V19C19 17.9391 18.5786 16.9217 17.8284 16.1716C17.0783 15.4214 16.0609 15 15 15H9C7.93913 15 6.92172 15.4214 6.17157 16.1716C5.42143 16.9217 5 17.9391 5 19V21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        個人設定
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- dropdown component with icon end -->
+    </div>
+
+    <script type="module" src="../main.js"></script>
+</body>
+
+</html>

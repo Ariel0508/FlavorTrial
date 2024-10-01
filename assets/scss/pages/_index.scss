@@ -250,7 +250,7 @@
   .more-post-btn {
     color: $deco-pink;
     &:hover {
-      color: $gray-200;
+      text-decoration: underline;
     }
   }
 }
