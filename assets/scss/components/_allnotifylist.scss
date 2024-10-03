@@ -1,0 +1,25 @@
+.notify-cover {
+    .notify-back {
+        top: 0;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $primary;
+
+        @media (min-width:768px) {
+            flex-direction: row;
+        }
+    }
+
+    &:hover {
+        .notify-back {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity .2s ease;
+        }
+    }
+}
