@@ -24,11 +24,11 @@
 }
 
 .marquee-scroll {
-    animation: marquee 10s linear infinite;
+    animation: marquee 20s linear infinite;
 }
 
 .marquee-scroll2 {
-    animation: marquee 10s linear infinite;
+    animation: marquee 20s linear infinite;
 }
 
 .marquee {
@@ -40,10 +40,13 @@
 
 .marquee-content {
     display: flex;
-    animation: marquee 10s linear infinite;
+    animation: marquee 20s linear infinite;
 
-    img {
-        min-height: 160px;
-        max-height: 160px;
+    embed {
+        height: 120px;
+
+        @include media-breakpoint-up(xl) {
+            height: 160px;
+        }
     }
 }
