@@ -23,3 +23,17 @@
         }
     }
 }
+
+.round-top {
+    border-radius: 8px 8px 0 0;
+}
+
+.round-bottom {
+    border-radius: 0 0 8px 8px;
+}
+
+.notifyList {
+    .unchecked {
+        background-color: rgba(0, 80, 63, 0.08);
+    }
+}
