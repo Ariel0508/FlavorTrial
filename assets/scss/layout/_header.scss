@@ -134,6 +134,14 @@
             width: 89.3%;
             border-radius: 0 0 8px 0;
         }
+        @include media-breakpoint-up(xl) {
+            min-width: 84%;
+            border-radius: 0 0 8px 0;
+        }
+        @include media-breakpoint-up(xxl) {
+            width: 89.3%;
+            border-radius: 0 0 8px 0;
+        }
     }
 
     &::after {
