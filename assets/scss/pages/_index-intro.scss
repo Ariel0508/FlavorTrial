@@ -1,14 +1,13 @@
 .intro {
     overflow-x: clip;
+
     &-title {
         position: relative;
         height: 416px;
 
-        @include media-breakpoint-up(lg) {
-            height: 1000px;
-        }
         @include media-breakpoint-up(xxl) {
             height: 1080px;
+            width: 100%;
         }
 
         h3 {
@@ -19,34 +18,6 @@
             @include media-breakpoint-up(lg) {
             font-size: 80px;
             }
-        }
-    }
-
-    &-cover {
-        position: absolute;
-        top: 58%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        min-width: 403px;
-        @include media-breakpoint-up(md) {
-            top: 56%;
-            left: 50%;
-            max-width: 78%;
-        }
-        @include media-breakpoint-up(lg) {
-            top: 50%;
-            left: 52%;
-            max-width: 78%;
-        }
-        @include media-breakpoint-up(xl) {
-            top: 50%;
-            left: 58.5%;
-            max-width: 53%;
-        }
-        @include media-breakpoint-up(xxl) {
-            top: 50%;
-            left: 58%;
-            max-width: 731px;
         }
     }
 
@@ -62,4 +33,108 @@
     }
 
   }
-  
+
+  .path-section-sm {
+    position: relative;
+    width: 385px;
+    height: 256px;
+   .path-sm {
+    position: absolute;
+    width: 385px;
+    height: 256px;
+    top: -30px;
+    left: -20px;
+       
+    
+   &::after {
+    content: "";
+    position: absolute;
+    width: 371px;
+    height: 261px;
+    left: 20px;
+    top: 22px;
+    background-image: url('/assets/images/path-sm.png');
+    background-repeat: no-repeat;
+    z-index: 1;
+   }
+}
+  }
+
+
+  .path-section {
+    position: relative;
+    width: 672px;
+    height: 478px;
+   .path {
+   position: absolute;
+   width: 672px;
+   height: 478px;
+   top: -5px;
+   left: -50px;
+
+   &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 25px;
+    top: 30px;
+    background-image: url('/assets/images/path.png');
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+  .path-text {
+  position: absolute;
+  top: 230px;
+  left: 55px;
+  width: 610px;
+  height: 90px;
+  z-index: 9;
+}
+.stroke {
+    position: relative;
+    color: $primary; 
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 150%;
+    z-index: 10; 
+    text-align: center;
+	&::before {
+        position: absolute; 
+        left: 0; 
+        top: 0; 
+        z-index: -1; 
+        -webkit-text-stroke: 4px $gray-200;
+        content: attr(data-stroke); 
+    }
+    }
+
+    &:hover {
+        &::after,
+        .path-text,
+        .stroke,
+        .stroke::before {
+            display: none;
+        }
+    }
+
+    .card-hover {
+        opacity: 0;
+        visibility: hidden;
+        transition:opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        top: 30px;
+        left: 15px;
+    }
+
+    &:hover {
+        .card-hover {
+            opacity: 1;
+            visibility: visible;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+}
