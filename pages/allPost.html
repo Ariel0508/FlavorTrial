@@ -9,53 +9,159 @@
 </head>
 
 <body>
-  <div class="container pt-5">
-    <div class="row align-items-center bg-white g-2">
-      <div class="col-auto">
-        <div class="d-flex align-items-stretch bg-white rounded-3 p-1">
-          <button type="button" class="btn btn-light text-dark px-3 rounded-3 fs-6 d-flex align-items-center" style="height: 40px;">
-            全部貼文
-          </button>
-          <button type="button" class="btn btn-primary text-white px-3 rounded-3 fs-6 d-flex align-items-center" style="height: 40px;">
-            <img src="../assets/images/icon/flame.svg" alt="" class="me-2" width="20" height="20">
-            熱門貼文
-          </button>
-          <button type="button" class="btn btn-light text-dark px-3 rounded-3 fs-6 d-flex align-items-center" style="height: 40px;">
-            <img src="../assets/images/icon/drumstick.svg" alt="" class="me-2" width="20" height="20">
-            最新貼文
-          </button>
-          <button type="button" class="btn btn-light text-dark px-3 rounded-3 fs-6 d-flex align-items-center" style="height: 40px;">
-            <img src="../assets/images/icon/heart.svg" alt="" class="me-2" width="20" height="20">
-            追蹤貼文
-          </button>
+    <div class="container pt-5">
+        <div class="row align-items-center bg-white">
+          <!--貼文篩選-->
+          <div class="col-12 col-lg-auto">
+            <!-- 大螢幕時顯示按鈕群組 -->
+            <div class="d-none d-lg-block">
+              <div class="d-flex align-items-stretch bg-light rounded-3 p-1">
+                <button
+                  type="button"
+                  class="btn btn-light text-dark px-3 rounded-3 fs-6"
+                  style="height: 40px"
+                >
+                  全部貼文
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary text-white px-3 rounded-3 fs-6 d-flex align-items-center"
+                  style="height: 40px"
+                >
+                  <img
+                    src="../assets/images/icon/flame.svg"
+                    alt=""
+                    class="me-2"
+                    width="20"
+                    height="20"
+                  />
+                  熱門貼文
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-light text-dark px-3 rounded-3 fs-6 d-flex align-items-center"
+                  style="height: 40px"
+                >
+                  <img
+                    src="../assets/images/icon/drumstick.svg"
+                    alt=""
+                    class="me-2"
+                    width="20"
+                    height="20"
+                  />
+                  最新貼文
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-light text-dark px-3 rounded-3 fs-6 d-flex align-items-center"
+                  style="height: 40px"
+                >
+                  <img
+                    src="../assets/images/icon/heart.svg"
+                    alt=""
+                    class="me-2"
+                    width="20"
+                    height="20"
+                  />
+                  追蹤貼文
+                </button>
+              </div>
+            </div>
+            <!-- 小螢幕時顯示下拉選單 -->
+            <div class="d-lg-none">
+              <div class="dropdown">
+                <button
+                  class="btn btn-primary dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  熱門貼文
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <li><a class="dropdown-item" href="#">熱門貼文</a></li>
+                  <li><a class="dropdown-item" href="#">最新貼文</a></li>
+                  <li><a class="dropdown-item" href="#">追蹤貼文</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--類型篩選-->
+          <div class="col-auto d-flex justify-content-between flex-grow-1">
+            <!--地理位置 & 美食類型-->
+            <div class="d-flex flex-grow-1">
+              <div class="me-3">
+                <button
+                  type="button"
+                  class="btn btn-light d-flex align-items-center justify-content-between px-3 rounded-3 fs-6"
+                  style="height: 40px; width: 100%"
+                >
+                  <span>地理位置</span>
+                  <img
+                    loading="lazy"
+                    src="../assets/images/icon/chevron-down.svg"
+                    alt="Location icon"
+                    width="16"
+                    height="16"
+                  />
+                </button>
+              </div>
+              <div>
+                <button
+                  type="button"
+                  class="btn btn-light d-flex align-items-center justify-content-between px-3 rounded-3 fs-6"
+                  style="height: 40px; width: 100%"
+                >
+                  <span>美食類型</span>
+                  <img
+                    loading="lazy"
+                    src="../assets/images/icon/chevron-down.svg"
+                    alt="Food type icon"
+                    width="16"
+                    height="16"
+                  />
+                </button>
+              </div>
+            </div>
+            <!--數字 & 重置-->
+            <div class="d-flex align-items-center">
+              <button
+                class="btn btn-light rounded-3 d-flex align-items-center justify-content-center fs-6"
+                style="width: 40px; height: 40px"
+                aria-label="Page 1"
+              >
+                1
+              </button>
+              <button
+                class="d-none d-lg-flex btn btn-light text-center align-items-center p-0 rounded-3 fs-6"
+                style="height: 40px"
+              >
+                清空篩選
+                <img
+                  src="../assets/images/icon/undo-2.png"
+                  alt=""
+                  class="ms-2"
+                  width="16"
+                  height="16"
+                />
+              </button>
+  
+              <button
+                class="d-flex d-lg-none btn btn-light text-center align-items-center p-0 rounded-3 fs-6"
+                style="height: 40px"
+              >
+                <img
+                  src="../assets/images/icon/x.svg"
+                  alt=""
+                  width="16px"
+                  height="16px"
+                />
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-      
-      <div class="col-auto">
-        <button type="button" class="btn btn-light d-flex align-items-center justify-content-between px-3 rounded-3 fs-6" style="height: 40px; width: 160px;">
-          <span>地理位置</span>
-          <img loading="lazy" src="../assets/images/icon/chevron-down.svg" alt="Location icon" width="16" height="16">
-        </button>
-      </div>
-  
-      <div class="col-auto">
-        <button type="button" class="btn btn-light d-flex align-items-center justify-content-between px-3 rounded-3 fs-6" style="height: 40px; width: 160px;">
-          <span>美食類型</span>
-          <img loading="lazy" src="../assets/images/icon/chevron-down.svg" alt="Food type icon" width="16" height="16">
-        </button>
-      </div>
-  
-      <div class="col-auto ms-auto">
-        <button class="btn btn-light rounded-3 d-flex align-items-center justify-content-center fs-6" style="width: 40px; height: 40px;" aria-label="Page 1">1</button>
-      </div>
-      <div class="col-auto">
-        <button class="btn btn-light d-flex align-items-center px-3 rounded-3 fs-6" style="height: 40px;">
-          清空篩選
-          <img src="../assets/images/icon/undo-2.png" alt="" class="ms-2" width="16" height="16">
-        </button>
-      </div>
-    </div>
-  </div>
 
 
   <div class="postCard">
@@ -270,10 +376,10 @@
                         <div class="d-flex flex-wrap align-items-center py-4">
                             <div class="card-header d-flex align-items-center me-auto mb-5 mb-md-0">
                                 <div class="d-flex align-items-center">
-                                    <img src="https://via.placeholder.com/48" alt="User avatar"
+                                    <img src="../assets/images/allPost/Ellipse 2.png" alt="User avatar"
                                         class="rounded-circle me-3" width="48" height="48">
                                     <div>
-                                        <h2 class="h5 mb-1">法國地頭蛇</h2>
+                                        <h2 class="h5 mb-1">伯朗大道</h2>
                                         <p class="text-gray-700 small mb-0">台北市 / 信義區· 2hr</p>
                                     </div>
                                 </div>
@@ -289,16 +395,14 @@
                             </div>
                             <!-- 用 badge 會有 bs 預設樣式 -->
                             <div class="d-flex flex-wrap gap-2">
-                                <span class="badge bg-primary">最新</span>
                                 <span class="badge bg-primary">熱門</span>
                                 <span class="badge bg-primary">預留中</span>
                                 <span class="badge bg-primary">已領取</span>
-                                <span class="badge bg-primary">仍可領取</span>
                             </div>
                         </div>
                         <div class="py-7 border-top border-bottom">
                             <div class="d-flex">
-                                <h2 class="fs-3 mb-5">奢華午餐，尋找飢餓的你！</h2>
+                                <h2 class="fs-3 mb-5">知名咖啡買一送一，有沒有人要幫忙喝</h2>
                                 <a href="
                                     #" class="ms-auto d-none d-md-block">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -310,7 +414,7 @@
                                     </svg>
                                 </a>
                             </div>
-                            <p class="text-gray-700 text-truncate mb-5">公司今天的會議取消了，現在有20個未開封的精緻便當在半公里孤單寂寞。</p>
+                            <p class="text-gray-700 text-truncate mb-5">我已經喝了一杯，再來一杯恐怕是要整晚失眠。有沒有在附近正好需要提神的朋友。</p>
                             <div class="d-flex gap-7 text-black">
                                 <div class="d-flex align-items-center">
                                     <svg class="me-2" width="16" height="16" viewBox="0 0 24 24" fill="none"
@@ -324,7 +428,7 @@
                                             stroke="black" stroke-width="2" stroke-linecap="round"
                                             stroke-linejoin="round" />
                                     </svg>
-                                    178
+                                    209
                                 </div>
                                 <div class="d-flex align-items-center">
                                     <svg class="me-2" width="16" height="16" viewBox="0 0 24 24" fill="none"
@@ -334,7 +438,7 @@
                                             stroke="#121212" stroke-width="2" stroke-linecap="round"
                                             stroke-linejoin="round" />
                                     </svg>
-                                    7
+                                    13
                                 </div>
                                 <div class="d-flex align-items-center">
                                     <svg class="me-2" width="16" height="16" viewBox="0 0 24 24" fill="none"
@@ -344,7 +448,7 @@
                                             stroke="#121212" stroke-width="2" stroke-linecap="round"
                                             stroke-linejoin="round" />
                                     </svg>
-                                    13
+                                    45
                                 </div>
                             </div>
                         </div>
@@ -460,7 +564,7 @@
                             </svg>
                             <div class="fs-4 fw-medium text-white mt-5">查看更多</div>
                         </div>
-                        <img src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGZvb2R8ZW58MHx8MHx8fDA%3D"
+                        <img src="../assets/images/allPost/Rectangle 2.png"
                             alt="Property image" class="img-fluid rounded-3 object-fit-cover">
                     </a>
                 </div>
@@ -474,10 +578,10 @@
                         <div class="d-flex flex-wrap align-items-center py-4">
                             <div class="card-header d-flex align-items-center me-auto mb-5 mb-md-0">
                                 <div class="d-flex align-items-center">
-                                    <img src="https://via.placeholder.com/48" alt="User avatar"
+                                    <img src="../assets/images/allPost/Ellipse 3.png" alt="User avatar"
                                         class="rounded-circle me-3" width="48" height="48">
                                     <div>
-                                        <h2 class="h5 mb-1">法國地頭蛇</h2>
+                                        <h2 class="h5 mb-1">台北蒸煮丹</h2>
                                         <p class="text-gray-700 small mb-0">台北市 / 信義區· 2hr</p>
                                     </div>
                                 </div>
@@ -493,16 +597,13 @@
                             </div>
                             <!-- 用 badge 會有 bs 預設樣式 -->
                             <div class="d-flex flex-wrap gap-2">
-                                <span class="badge bg-primary">最新</span>
                                 <span class="badge bg-primary">熱門</span>
-                                <span class="badge bg-primary">預留中</span>
                                 <span class="badge bg-primary">已領取</span>
-                                <span class="badge bg-primary">仍可領取</span>
                             </div>
                         </div>
                         <div class="py-7 border-top border-bottom">
                             <div class="d-flex">
-                                <h2 class="fs-3 mb-5">奢華午餐，尋找飢餓的你！</h2>
+                                <h2 class="fs-3 mb-5">好吃到不行的披薩在這裡等你來領</h2>
                                 <a href="
                                     #" class="ms-auto d-none d-md-block">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -514,7 +615,7 @@
                                     </svg>
                                 </a>
                             </div>
-                            <p class="text-gray-700 text-truncate mb-5">公司今天的會議取消了，現在有20個未開封的精緻便當在半公里孤單寂寞。</p>
+                            <p class="text-gray-700 text-truncate mb-5">突然好想吃披薩買了一盒，結果自己吃不完～～有人要幫忙吃嗎? 自取地點</p>
                             <div class="d-flex gap-7 text-black">
                                 <div class="d-flex align-items-center">
                                     <svg class="me-2" width="16" height="16" viewBox="0 0 24 24" fill="none"
@@ -528,7 +629,7 @@
                                             stroke="black" stroke-width="2" stroke-linecap="round"
                                             stroke-linejoin="round" />
                                     </svg>
-                                    178
+                                    99
                                 </div>
                                 <div class="d-flex align-items-center">
                                     <svg class="me-2" width="16" height="16" viewBox="0 0 24 24" fill="none"
@@ -538,7 +639,7 @@
                                             stroke="#121212" stroke-width="2" stroke-linecap="round"
                                             stroke-linejoin="round" />
                                     </svg>
-                                    7
+                                    2
                                 </div>
                                 <div class="d-flex align-items-center">
                                     <svg class="me-2" width="16" height="16" viewBox="0 0 24 24" fill="none"
@@ -548,7 +649,7 @@
                                             stroke="#121212" stroke-width="2" stroke-linecap="round"
                                             stroke-linejoin="round" />
                                     </svg>
-                                    13
+                                    30
                                 </div>
                             </div>
                         </div>
@@ -664,7 +765,7 @@
                             </svg>
                             <div class="fs-4 fw-medium text-white mt-5">查看更多</div>
                         </div>
-                        <img src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGZvb2R8ZW58MHx8MHx8fDA%3D"
+                        <img src="../assets/images/allPost/Rectangle 3.png"
                             alt="Property image" class="img-fluid rounded-3 object-fit-cover">
                     </a>
                 </div>
@@ -678,11 +779,11 @@
                         <div class="d-flex flex-wrap align-items-center py-4">
                             <div class="card-header d-flex align-items-center me-auto mb-5 mb-md-0">
                                 <div class="d-flex align-items-center">
-                                    <img src="https://via.placeholder.com/48" alt="User avatar"
+                                    <img src="../assets/images/allPost/Ellipse 4.png" alt="User avatar"
                                         class="rounded-circle me-3" width="48" height="48">
                                     <div>
-                                        <h2 class="h5 mb-1">法國地頭蛇</h2>
-                                        <p class="text-gray-700 small mb-0">台北市 / 信義區· 2hr</p>
+                                        <h2 class="h5 mb-1">台中小鋼炮</h2>
+                                        <p class="text-gray-700 small mb-0">台中市 / 中西區· 2hr</p>
                                     </div>
                                 </div>
                                 <a href="#" class="ms-auto d-md-none">
@@ -697,16 +798,13 @@
                             </div>
                             <!-- 用 badge 會有 bs 預設樣式 -->
                             <div class="d-flex flex-wrap gap-2">
-                                <span class="badge bg-primary">最新</span>
                                 <span class="badge bg-primary">熱門</span>
-                                <span class="badge bg-primary">預留中</span>
-                                <span class="badge bg-primary">已領取</span>
                                 <span class="badge bg-primary">仍可領取</span>
                             </div>
                         </div>
                         <div class="py-7 border-top border-bottom">
                             <div class="d-flex">
-                                <h2 class="fs-3 mb-5">奢華午餐，尋找飢餓的你！</h2>
+                                <h2 class="fs-3 mb-5">氣氣7777777便當沒發完不能下班</h2>
                                 <a href="
                                     #" class="ms-auto d-none d-md-block">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -718,7 +816,7 @@
                                     </svg>
                                 </a>
                             </div>
-                            <p class="text-gray-700 text-truncate mb-5">公司今天的會議取消了，現在有20個未開封的精緻便當在半公里孤單寂寞。</p>
+                            <p class="text-gray-700 text-truncate mb-5">我要發完便當才能下班＠＠快來當好心人幫忙吃便當。地點在台中科技大學的資訊...</p>
                             <div class="d-flex gap-7 text-black">
                                 <div class="d-flex align-items-center">
                                     <svg class="me-2" width="16" height="16" viewBox="0 0 24 24" fill="none"
@@ -732,7 +830,7 @@
                                             stroke="black" stroke-width="2" stroke-linecap="round"
                                             stroke-linejoin="round" />
                                     </svg>
-                                    178
+                                    189
                                 </div>
                                 <div class="d-flex align-items-center">
                                     <svg class="me-2" width="16" height="16" viewBox="0 0 24 24" fill="none"
@@ -752,7 +850,7 @@
                                             stroke="#121212" stroke-width="2" stroke-linecap="round"
                                             stroke-linejoin="round" />
                                     </svg>
-                                    13
+                                    38
                                 </div>
                             </div>
                         </div>
@@ -868,7 +966,7 @@
                             </svg>
                             <div class="fs-4 fw-medium text-white mt-5">查看更多</div>
                         </div>
-                        <img src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGZvb2R8ZW58MHx8MHx8fDA%3D"
+                        <img src="../assets/images/allPost/Rectangle 4.png"
                             alt="Property image" class="img-fluid rounded-3 object-fit-cover">
                     </a>
                 </div>
