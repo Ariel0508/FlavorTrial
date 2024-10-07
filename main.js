@@ -5,3 +5,4 @@ import './js/swiper.js';
 
 import  './js/dropdown.js';
 import './js/marquee.js';
+import './js/cityselect.js';
