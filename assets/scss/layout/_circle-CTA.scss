@@ -5,6 +5,11 @@
     background-color: black;
     cursor: pointer;
 
+    &-content-title {
+        width: 58px;
+        height: 58px;
+    }
+
     &-rotating-text {
         position: absolute;
         fill: none;
