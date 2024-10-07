@@ -7,7 +7,6 @@ const districts = {
 };
 
 citySelect.addEventListener('change', function () {
-    // 清空區域選單的選項
     districtSelect.innerHTML = '<option value="">請選擇區域</option>';
     const selectedCity = citySelect.value;
     if (districts[selectedCity]) {
