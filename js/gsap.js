@@ -8,8 +8,8 @@ const ctaButton = document.querySelector(".cta-button");
 
 gsap.set(ctaButton, {
     position: 'absolute',
-    bottom: '20px',
-    right: '20px',
+    bottom: '24px',
+    right: '24px',
     opacity: 0,
     visibility: 'hidden',
     zIndex: 1000,
