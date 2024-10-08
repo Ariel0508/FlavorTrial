@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>所有貼文頁</title>
+    <style>
+      .floating-btn {
+        position: fixed;
+        bottom: 20px; /* 距離頁面底部 20px */
+        left: 20px; /* 距離頁面右側 20px */
+        z-index: 1000; /* 保證按鈕在最上層 */
+      }
+    </style>
+    <script type="module" crossorigin src="/FlavorTrail/assets/main-6d72ec21.js"></script>
+    <link rel="stylesheet" href="/FlavorTrail/assets/main-2aac0f0a.css">
+  </head>
+  <body>
+    <!--照片區-->
+    <div class="container">
+      <div class="row mt-3 mt-lg-7 mb-7">
+        <div class="col-lg-8 col-12">
+          <div class="w-100">
+            <img
+              class="w-100 rounded-3 object-fit-cover"
+              src="../assets/images/allPost/Rectangle 2.svg"
+              alt=""
+              style="max-height: 580px;"
+            />
+          </div>
+        </div>
+        <div class="d-none d-lg-flex flex-column col-lg-4">
+            <div class="mb-7 w-100 h-100">
+              <img
+                class="w-100 rounded-3 object-fit-cover"
+                src="../assets/images/allPost/Rectangle 3.png"
+                alt=""
+                style="min-height: 278px;"
+              />
+            </div>
+            <div class="w-100 h-100">
+              <img
+                class="w-100 rounded-3 object-fit-cover"
+                src="../assets/images/allPost/Frame 78.png"
+                alt=""
+                style="min-height: 278px;"
+              />
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!--貼文區 ＆ 領取區-->
+    <div class="container">
+      <!--貼文領取區大row-->
+      <div class="row gx-3">
+        <!--左邊貼文區-->
+        <div class="col-12 col-lg-8 bg-white rounded-3 p-3 mb-3">
+          <!--個人資訊區-->
+          <div class="row mx-2 py-3 border-bottom">
+            <!--頭像及稱號-->
+            <div class="col-lg-8 col-12 d-flex p-0">
+              <div class="col-2 d-flex">
+                <img
+                  src="/FlavorTrail/assets/user-367398a5.svg"
+                  alt=""
+                  sizes=""
+                  srcset=""
+                  class="h-20 w-20"
+                />
+              </div>
+              <div class="col-5 flex-grow-1">
+                <div style="font-size: 20px" class="col fs-4">法國地頭蛇</div>
+                <div style="font-size: 14px" class="col">
+                  台北市 / 信義區· 2hr
+                </div>
+              </div>
+              <div
+                class="col d-sm-none d-flex text-center pe-0 align-items-center justify-content-end"
+              >
+                <img src="/FlavorTrail/assets/square-pen-3171ab02.svg" alt="" />
+              </div>
+            </div>
+            <!--後面三個標籤-->
+            <div
+              class="d-none col-12 col-lg-4 d-lg-flex justify-content-lg-end justify-content-start px-2 py-3"
+            >
+              <h5>
+                <span class="badge bg-primary fw-light">最新</span>
+              </h5>
+              <h5>
+                <span class="badge bg-primary fw-light">熱門</span>
+              </h5>
+              <h5>
+                <span class="badge bg-primary fw-light">仍可領取</span>
+              </h5>
+            </div>
+          </div>
+          <!--內文區-->
+          <div class="row mx-2">
+            <!--後面三個標籤-->
+            <div
+              class="d-lg-none col-12 col-lg-4 d-flex justify-content-lg-end justify-content-start px-2 py-3"
+            >
+              <h5>
+                <span class="badge bg-primary fw-light">最新</span>
+              </h5>
+              <h5>
+                <span class="badge bg-primary fw-light">熱門</span>
+              </h5>
+              <h5>
+                <span class="badge bg-primary fw-light">仍可領取</span>
+              </h5>
+            </div>
+            <!--標題區-->
+            <div class="row py-3 justify-content-between pe-0">
+              <h4 class="col-10 ps-0 flex-grow-1">奢華午餐，尋找飢餓的你！</h4>
+              <div class="col text-end pe-0 d-none d-sm-flex">
+                <img src="/FlavorTrail/assets/square-pen-3171ab02.svg" alt="" />
+              </div>
+            </div>
+            <!--內文區-->
+            <div class="row">
+              <ul class="list-unstyled px-0 fw-lighter">
+                <li>
+                  公司今天的會議取消了，現在有20個未開封的精緻便當在辦公室裡孤單寂寞。
+                </li>
+                <li>這些美味的午餐現在孤單地等待著我們的到來。</li>
+                <br />
+                <li>每個便當的內容:</li>
+                <li>主菜: 日本和牛漢堡 (A5等級,油花滿滿)</li>
+                <li>配菜:黑松露薯條 (香氣四溢,停不下來)</li>
+                <li>沙拉: 迷你龍蝦沙拉(新鮮龍蝦搭配特製醬料)rr</li>
+                <li>甜點: 開心果馬卡龍 (精緻可口,回甘無窮)</li>
+                <li>飲料: 冷萃精品咖啡 (哥倫比亞單品豆,口感順滑)</li>
+                <br />
+                <li>* 領取方式:請到前台告知領取便當</li>
+                <br />
+                <li>小提醒:</li>
+                <ol class="list-group-numbered">
+                  <li class="list-group-item">為地球盡一份心力</li>
+                  <li class="list-group-item">
+                    歡迎三五好友一起來,但請勿一人多拿,讓更多人有機會品嚐
+                  </li>
+                  <li class="list-group-item">
+                    如果你是素食者,我們還有5份素食便當喔
+                  </li>
+                </ol>
+                <br />
+              </ul>
+            </div>
+            <!--按讚統計區-->
+            <div class="row w-auto d-inline justify-content-start pb-3">
+              <div class="col d-inline ps-0">
+                <img class="me-2" src="/FlavorTrail/assets/eye-e7290fd3.svg" alt="" />
+                <span>178</span>
+              </div>
+              <div class="col d-inline">
+                <img
+                  class="me-2"
+                  src="/FlavorTrail/assets/message-circle-b4637651.svg"
+                  alt=""
+                />
+                <span>7</span>
+              </div>
+              <div class="col d-inline">
+                <img
+                  class="me-2"
+                  src="/FlavorTrail/assets/thumbs-up-f10f5c7b.svg"
+                  alt=""
+                />
+                <span>13</span>
+              </div>
+            </div>
+          </div>
+          <!--按鈕區-->
+          <div
+            class="row pt-3 pb-2 mx-2 border-top justify-content-lg-between justify-content-start"
+          >
+            <div class="col-auto text-center">
+              <button type="button" class="btn p-0">
+                <span class="d-none d-lg-inline">點讚</span>
+                <img src="/FlavorTrail/assets/thumbs-up-f10f5c7b.svg" alt="" />
+              </button>
+            </div>
+            <div class="col-auto text-center">
+              <button type="button" class="btn p-0">
+                <span class="d-none d-lg-inline">留言</span>
+                <img src="/FlavorTrail/assets/message-circle-b4637651.svg" alt="" />
+              </button>
+            </div>
+            <div class="col-auto text-center">
+              <button type="button" class="btn p-0">
+                <span class="d-none d-lg-inline text-nowrap">追蹤貼文</span>
+                <img src="/FlavorTrail/assets/bell-881a3f6b.svg" alt="" />
+              </button>
+            </div>
+            <div class="d-none d-lg-inline col-auto text-center">
+              <button type="button" class="btn p-0">
+                <span class="text-nowrap">編輯貼文</span>
+                <img src="/FlavorTrail/assets/file-pen-77b8f114.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <!--右邊領取區-->
+        <div class="col-12 col-lg-4 mt-0">
+          <!--內縮底色-->
+          <div class="row mx-2 px-3 bg-white rounded-3">
+            <!--份數統計-->
+            <div class="row my-4 gx-0">
+              <div class="col text-center border-end">
+                <p class="fw-lighter">總共份數</p>
+                <h3>25</h3>
+              </div>
+              <div class="col text-center border-end">
+                <p class="fw-lighter">已領取</p>
+                <h3>2</h3>
+              </div>
+              <div class="col text-center border-end">
+                <p class="fw-lighter">預留</p>
+                <h3>3</h3>
+              </div>
+              <div class="col text-center">
+                <p class="fw-lighter">待領取</p>
+                <h3>20</h3>
+              </div>
+            </div>
+            <!--領取按鈕-->
+            <div class="row my-4 gx-0 d-lg-flex d-none">
+              <button type="button" class="btn btn-dark">
+                <span>我要領取</span
+                ><img src="/FlavorTrail/assets/hand-6366f248.svg" alt="" />
+              </button>
+            </div>
+            <!--取餐細節-->
+            <div class="row my-4 border-top pt-3 gx-0">
+              <div class="row justify-content-between gx-0">
+                <div class="col">食物名稱</div>
+                <div class="col text-end">高級便當們</div>
+              </div>
+              <div class="row justify-content-between gx-0">
+                <div class="col">取餐地點</div>
+                <div class="col text-end">台北市 / 內湖區</div>
+              </div>
+              <div class="row justify-content-between gx-0">
+                <div class="col">取餐時間</div>
+                <div class="col text-end">14:00 ~ 16:00</div>
+              </div>
+              <div class="row justify-content-between gx-0">
+                <div class="col">食品有效期限</div>
+                <div class="col text-end">2028/06/08</div>
+              </div>
+            </div>
+            <!--標籤區-->
+            <div class="row my-4 border-top pt-5 gx-0">
+              <div class="d-flex justify-content-between">
+                <h6>
+                  <img
+                    style="height: 16px; width: 16px"
+                    src="/FlavorTrail/assets/drumstick-16a35311.svg"
+                    alt=""
+                  /><span>素食</span>
+                </h6>
+                <h6>
+                  <img
+                    style="height: 16px; width: 16px"
+                    src="/FlavorTrail/assets/drumstick-16a35311.svg"
+                    alt=""
+                  /><span>葷食</span>
+                </h6>
+                <h6>
+                  <img
+                    style="height: 16px; width: 16px"
+                    src="/FlavorTrail/assets/drumstick-16a35311.svg"
+                    alt=""
+                  /><span>主食</span>
+                </h6>
+                <h6>
+                  <img
+                    style="height: 16px; width: 16px"
+                    src="/FlavorTrail/assets/drumstick-16a35311.svg"
+                    alt=""
+                  /><span>冷藏</span>
+                </h6>
+                <h6>
+                  <img
+                    style="height: 16px; width: 16px"
+                    src="/FlavorTrail/assets/drumstick-16a35311.svg"
+                    alt=""
+                  /><span style="width: auto">未過保鮮期</span>
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--留言區-->
+    <div class="container">
+      <div class="row pe-3 mt-3">
+        <div class="col-12 col-lg-8 mx-2 px-3 bg-white rounded-3 mb-3">
+          <!--下拉式選單-->
+          <div class="row">
+            <select
+              class="form-select m-3"
+              aria-label="Default select example"
+              style="width: 160px; height: 40px"
+            >
+              <option selected>全部留言</option>
+              <option value="1">最新排序</option>
+            </select>
+          </div>
+          <!--留言區1-->
+          <div class="row border-bottom pb-5">
+            <!--頭像 & 暱稱 & 樓層、時間-->
+            <div class="row ms-3">
+              <!--頭像-->
+              <div class="col-1 p-0">
+                <img
+                  class="h-100 w-100"
+                  src="/FlavorTrail/assets/event-1-581ea307.svg"
+                  alt=""
+                />
+              </div>
+              <!--暱稱、樓層時間-->
+              <div class="col-4 flex-grow-1">
+                <div class="col-12">愛吃寶貝</div>
+                <div class="col-12">B1・今天下午 3:30</div>
+              </div>
+            </div>
+            <div class="row m-3"><div class="col">想吃～但是太遠了QQ</div></div>
+            <div class="row m-3">
+              <div class="col">
+                <a href="#" class="link-success fw-bold">回覆</a>
+              </div>
+            </div>
+          </div>
+          <!--留言區2-->
+          <div class="row border-bottom py-5">
+            <!--頭像 & 暱稱 & 樓層、時間-->
+            <div class="row ms-3">
+              <!--頭像-->
+              <div class="col-1 p-0">
+                <img
+                  class="h-100 w-100"
+                  src="/FlavorTrail/assets/event-1-581ea307.svg"
+                  alt=""
+                />
+              </div>
+              <!--暱稱、樓層時間-->
+              <div class="col-4 flex-grow-1">
+                <div class="col-12">LEO</div>
+                <div class="col-12">B2・今天下午 3:30</div>
+              </div>
+            </div>
+            <div class="row m-3">
+              <div class="col">看起來超誘人,期待有幸領取到~感恩分享!</div>
+            </div>
+            <div class="row m-3">
+              <div class="col">
+                <a href="#" class="link-success fw-bold">回覆</a>
+              </div>
+            </div>
+          </div>
+          <!--留言區3-->
+          <div class="row border-bottom py-5">
+            <!--頭像 & 暱稱 & 樓層、時間-->
+            <div class="row ms-3">
+              <!--頭像-->
+              <div class="col-1 p-0">
+                <img
+                  class="h-100 w-100"
+                  src="/FlavorTrail/assets/event-1-581ea307.svg"
+                  alt=""
+                />
+              </div>
+              <!--暱稱、樓層時間-->
+              <div class="col-4 flex-grow-1">
+                <div class="col-12">Alice</div>
+                <div class="col-12">B3・今天下午 3:30</div>
+              </div>
+            </div>
+            <div class="row m-3">
+              <div class="col">
+                已申請領取希望可以通過！謝謝樓主的暖心舉動！
+              </div>
+            </div>
+            <div class="row m-3">
+              <div class="col">
+                <a href="#" class="link-success fw-bold">回覆</a>
+              </div>
+            </div>
+          </div>
+          <!--留言區4-->
+          <div class="row border-bottom py-5">
+            <!--頭像 & 暱稱 & 樓層、時間-->
+            <div class="row ms-3">
+              <!--頭像-->
+              <div class="col-1 p-0">
+                <img
+                  class="h-100 w-100"
+                  src="/FlavorTrail/assets/event-1-581ea307.svg"
+                  alt=""
+                />
+              </div>
+              <!--暱稱、樓層時間-->
+              <div class="col-4 flex-grow-1">
+                <div class="col-12">煞氣 乂 Kelly</div>
+                <div class="col-12">B4・今天下午 3:30</div>
+              </div>
+            </div>
+            <div class="row m-3">
+              <div class="col">
+                啊啊啊啊啊 剛好今天開會不及買午餐，這家便當超好吃的
+              </div>
+            </div>
+            <div class="row m-3">
+              <div class="col">
+                <a href="#" class="link-success fw-bold">回覆</a>
+              </div>
+            </div>
+          </div>
+          <!--留言區5-->
+          <div class="row py-5">
+            <!--頭像 & 暱稱 & 樓層、時間-->
+            <div class="row ms-3">
+              <!--頭像-->
+              <div class="col-1 p-0">
+                <img
+                  class="h-100 w-100"
+                  src="/FlavorTrail/assets/event-1-581ea307.svg"
+                  alt=""
+                />
+              </div>
+              <!--暱稱、樓層時間-->
+              <div class="col-4 flex-grow-1">
+                <div class="col-12">克莉絲</div>
+                <div class="col-12">B5・今天下午 3:30</div>
+              </div>
+            </div>
+            <div class="row m-3">
+              <div class="col">
+                感謝分享，超好吃的！今天的午後因為你的分享變得更美好了~
+              </div>
+            </div>
+            <div class="row m-3">
+              <div class="col">
+                <a href="#" class="link-success fw-bold">回覆</a>
+              </div>
+            </div>
+          </div>
+          <!--留言輸入框-->
+          <div class="row pb-3 ps-3">
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="寫下你的留言"
+                aria-label="寫下你的留言"
+                aria-describedby="button-addon2"
+              />
+              <span class="input-group-text">
+                <i class="bi bi-person"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <h3 class="mt-5">其他可領取</h3>
+        <!--其他可領取區1-->
+        <div class="col-12 col-lg-8 mx-2 px-3 bg-white rounded-3 my-5">
+          <div class="row">
+            <div class="card my-3 border-0 bg-white">
+              <div class="row g-0">
+                <div class="d-block d-lg-none col-md-5 pt-3">
+                  <img
+                    src="/FlavorTrail/assets/post-2-27b47c2f.jpg"
+                    class="img-fluid rounded-3"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body pb-0">
+                    <div class="card-title mb-0">
+                      <div
+                        class="row justify-content-between px-3 border-bottom"
+                      >
+                        <!--頭像 & 暱稱 & 樓層時間-->
+                        <div class="col-5 flex-grow-1">
+                          <div class="row">
+                            <!--頭像-->
+                            <div class="col-1 p-0">
+                              <img
+                                class="h-100 w-100"
+                                src="/FlavorTrail/assets/event-1-581ea307.svg"
+                                alt=""
+                              />
+                            </div>
+                            <!--暱稱、樓層時間-->
+                            <div class="col-4 flex-grow-1 mb-3">
+                              <div class="col-12">伯朗大道</div>
+                              <div class="col-12">台北市 / 信義區· 2hr</div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--標籤區-->
+                        <div
+                          class="p-0 d-flex col-12 col-lg-5 flex-grow-1 justify-content-start justify-content-lg-end align-items-center"
+                        >
+                          <h5>
+                            <span class="badge bg-primary me-1">熱門</span>
+                          </h5>
+                          <h5>
+                            <span class="badge bg-primary me-1">預留中</span>
+                          </h5>
+                          <h5>
+                            <span class="badge bg-primary">仍可領取</span>
+                          </h5>
+                        </div>
+                      </div>
+                      <!--內文-->
+                      <div class="row my-3">
+                        <h4>知名咖啡買一送一，有沒有人要幫忙喝</h4>
+                        <p
+                          style="
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                          "
+                          class="py-3"
+                        >
+                          我已經喝了一杯，再來一杯恐怕是要整晚失眠。有沒有在附近正好需要提神的朋友。
+                        </p>
+                      </div>
+                      <!--觀看數、留言數、按讚數-->
+                      <div class="row my-3 px-3">
+                        <h6
+                          class="row w-auto d-inline justify-content-start pb-3"
+                        >
+                          <div class="col d-inline ps-0">
+                            <img
+                              class="me-2"
+                              src="/FlavorTrail/assets/eye-e7290fd3.svg"
+                              alt=""
+                            />
+                            <span>209</span>
+                          </div>
+                          <div class="col d-inline">
+                            <img
+                              class="me-2"
+                              src="/FlavorTrail/assets/message-circle-b4637651.svg"
+                              alt=""
+                            />
+                            <span>13</span>
+                          </div>
+                          <div class="col d-inline">
+                            <img
+                              class="me-2"
+                              src="/FlavorTrail/assets/thumbs-up-f10f5c7b.svg"
+                              alt=""
+                            />
+                            <span>45</span>
+                          </div>
+                        </h6>
+                      </div>
+                      <!--按鈕區-->
+                      <div
+                        class="row pt-3 border-top justify-content-start justify-content-lg-between"
+                      >
+                        <div class="d-none d-lg-block col-auto text-center">
+                          <button type="button" class="btn p-0 px-1">
+                            <span class="text-nowrap">我要領取</span>
+                            <img src="/FlavorTrail/assets/hand-6366f248.svg" alt="" />
+                          </button>
+                        </div>
+                        <div class="col-auto text-center">
+                          <button type="button" class="btn p-0">
+                            <span class="d-none d-lg-inline">點讚</span>
+                            <img
+                              src="/FlavorTrail/assets/thumbs-up-f10f5c7b.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="col-auto text-center">
+                          <button type="button" class="btn p-0">
+                            <span class="d-none d-lg-inline">留言</span>
+                            <img
+                              src="/FlavorTrail/assets/message-circle-b4637651.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="col-auto text-center">
+                          <button type="button" class="btn p-0">
+                            <span class="d-none d-lg-inline text-nowrap"
+                              >追蹤貼文</span
+                            >
+                            <img src="/FlavorTrail/assets/bell-881a3f6b.svg" alt="" />
+                          </button>
+                        </div>
+                        <div class="row my-4 gx-0 d-lg-none d-flex">
+                          <button type="button" class="btn btn-dark">
+                            <span>我要領取</span
+                            ><img src="/FlavorTrail/assets/hand-6366f248.svg" alt="" />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-none d-lg-block col-md-5 pt-3">
+                  <img
+                    src="/FlavorTrail/assets/post-2-27b47c2f.jpg"
+                    class="img-fluid rounded-3"
+                    alt="..."
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--其他可領取區2-->
+        <div class="col-12 col-lg-8 mx-2 px-3 bg-white rounded-3 my-5">
+          <div class="row">
+            <div class="card my-3 border-0 bg-white">
+              <div class="row g-0">
+                <div class="d-block d-lg-none col-md-5 pt-3">
+                  <img
+                    src="/FlavorTrail/assets/post-3-38caf32b.jpg"
+                    class="img-fluid rounded-3"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body pb-0">
+                    <div class="card-title mb-0">
+                      <div
+                        class="row justify-content-between px-3 border-bottom"
+                      >
+                        <!--頭像 & 暱稱 & 樓層時間-->
+                        <div class="col-5 flex-grow-1">
+                          <div class="row">
+                            <!--頭像-->
+                            <div class="col-1 p-0">
+                              <img
+                                class="h-100 w-100"
+                                src="/FlavorTrail/assets/event-1-581ea307.svg"
+                                alt=""
+                              />
+                            </div>
+                            <!--暱稱、樓層時間-->
+                            <div class="col-4 flex-grow-1 mb-3">
+                              <div class="col-12">台北蒸煮丹</div>
+                              <div class="col-12">台北市 / 信義區· 2hr</div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--標籤區-->
+                        <div
+                          class="p-0 d-flex col-12 col-lg-5 flex-grow-1 justify-content-start justify-content-lg-end align-items-center"
+                        >
+                          <h5>
+                            <span class="badge bg-primary me-1">熱門</span>
+                          </h5>
+                          <h5>
+                            <span class="badge bg-primary">仍可領取</span>
+                          </h5>
+                        </div>
+                      </div>
+                      <!--內文-->
+                      <div class="row my-3">
+                        <h4>好吃到不行的披薩在這裡等你來領</h4>
+                        <p
+                          style="
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                          "
+                          class="py-3"
+                        >
+                          突然好想吃披薩買了一盒，結果自己吃不完～～有人要幫忙吃嗎?
+                          自取地點
+                        </p>
+                      </div>
+                      <!--觀看數、留言數、按讚數-->
+                      <div class="row my-3 px-3">
+                        <h6
+                          class="row w-auto d-inline justify-content-start pb-3"
+                        >
+                          <div class="col d-inline ps-0">
+                            <img
+                              class="me-2"
+                              src="/FlavorTrail/assets/eye-e7290fd3.svg"
+                              alt=""
+                            />
+                            <span>99</span>
+                          </div>
+                          <div class="col d-inline">
+                            <img
+                              class="me-2"
+                              src="/FlavorTrail/assets/message-circle-b4637651.svg"
+                              alt=""
+                            />
+                            <span>2</span>
+                          </div>
+                          <div class="col d-inline">
+                            <img
+                              class="me-2"
+                              src="/FlavorTrail/assets/thumbs-up-f10f5c7b.svg"
+                              alt=""
+                            />
+                            <span>30</span>
+                          </div>
+                        </h6>
+                      </div>
+                      <!--按鈕區-->
+                      <div
+                        class="row pt-3 border-top justify-content-start justify-content-lg-between"
+                      >
+                        <div class="d-none d-lg-block col-auto text-center">
+                          <button type="button" class="btn p-0 px-1">
+                            <span class="text-nowrap">我要領取</span>
+                            <img src="/FlavorTrail/assets/hand-6366f248.svg" alt="" />
+                          </button>
+                        </div>
+                        <div class="col-auto text-center">
+                          <button type="button" class="btn p-0">
+                            <span class="d-none d-lg-inline">點讚</span>
+                            <img
+                              src="/FlavorTrail/assets/thumbs-up-f10f5c7b.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="col-auto text-center">
+                          <button type="button" class="btn p-0">
+                            <span class="d-none d-lg-inline">留言</span>
+                            <img
+                              src="/FlavorTrail/assets/message-circle-b4637651.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="col-auto text-center">
+                          <button type="button" class="btn p-0">
+                            <span class="d-none d-lg-inline text-nowrap"
+                              >追蹤貼文</span
+                            >
+                            <img src="/FlavorTrail/assets/bell-881a3f6b.svg" alt="" />
+                          </button>
+                        </div>
+                        <div class="row my-4 gx-0 d-lg-none d-flex">
+                          <button type="button" class="btn btn-dark">
+                            <span>我要領取</span
+                            ><img src="/FlavorTrail/assets/hand-6366f248.svg" alt="" />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-none d-lg-block col-md-5 pt-3">
+                  <img
+                    src="/FlavorTrail/assets/post-3-38caf32b.jpg"
+                    class="img-fluid rounded-3"
+                    alt="..."
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--其他可領取區3-->
+        <div class="col-12 col-lg-8 mx-2 px-3 bg-white rounded-3 my-5">
+          <div class="row">
+            <div class="card my-3 border-0 bg-white">
+              <div class="row g-0">
+                <div
+                  class="d-block d-lg-none col-md-5 pt-3"
+                  style="height: 238px; width: 360px"
+                >
+                  <img
+                    src="/FlavorTrail/assets/post-4-6a83ffac.jpg"
+                    class="img rounded-3 w-100 h-100"
+                    alt="..."
+                    style="object-fit: cover"
+                  />
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body pb-0">
+                    <div class="card-title mb-0">
+                      <div
+                        class="row justify-content-between px-3 border-bottom"
+                      >
+                        <!--頭像 & 暱稱 & 樓層時間-->
+                        <div class="col-5 flex-grow-1">
+                          <div class="row">
+                            <!--頭像-->
+                            <div class="col-1 p-0">
+                              <img
+                                class="h-100 w-100"
+                                src="/FlavorTrail/assets/event-1-581ea307.svg"
+                                alt=""
+                              />
+                            </div>
+                            <!--暱稱、樓層時間-->
+                            <div class="col-4 flex-grow-1 mb-3">
+                              <div class="col-12">台中小鋼炮</div>
+                              <div class="col-12">台中市 / 中西區· 2hr</div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--標籤區-->
+                        <div
+                          class="p-0 d-flex col-12 col-lg-5 flex-grow-1 justify-content-start justify-content-lg-end align-items-center"
+                        >
+                          <h5>
+                            <span class="badge bg-primary me-1">熱門</span>
+                          </h5>
+                          <h5>
+                            <span class="badge bg-primary">仍可領取</span>
+                          </h5>
+                        </div>
+                      </div>
+                      <!--內文-->
+                      <div class="row my-3">
+                        <h4>氣氣7777777便當沒發完不能下班</h4>
+                        <p
+                          style="
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                          "
+                          class="py-3"
+                        >
+                          我要發完便當才能下班＠＠快來當好心人幫忙吃便當。地點在台中科技大學的資訊...
+                        </p>
+                      </div>
+                      <!--觀看數、留言數、按讚數-->
+                      <div class="row my-3 px-3">
+                        <h6
+                          class="row w-auto d-inline justify-content-start pb-3"
+                        >
+                          <div class="col d-inline ps-0">
+                            <img
+                              class="me-2"
+                              src="/FlavorTrail/assets/eye-e7290fd3.svg"
+                              alt=""
+                            />
+                            <span>189</span>
+                          </div>
+                          <div class="col d-inline">
+                            <img
+                              class="me-2"
+                              src="/FlavorTrail/assets/message-circle-b4637651.svg"
+                              alt=""
+                            />
+                            <span>7</span>
+                          </div>
+                          <div class="col d-inline">
+                            <img
+                              class="me-2"
+                              src="/FlavorTrail/assets/thumbs-up-f10f5c7b.svg"
+                              alt=""
+                            />
+                            <span>38</span>
+                          </div>
+                        </h6>
+                      </div>
+                      <!--按鈕區-->
+                      <div
+                        class="row pt-3 border-top justify-content-start justify-content-lg-between"
+                      >
+                        <div class="d-none d-lg-block col-auto text-center">
+                          <button type="button" class="btn p-0 px-1">
+                            <span class="text-nowrap">我要領取</span>
+                            <img src="/FlavorTrail/assets/hand-6366f248.svg" alt="" />
+                          </button>
+                        </div>
+                        <div class="col-auto text-center">
+                          <button type="button" class="btn p-0">
+                            <span class="d-none d-lg-inline">點讚</span>
+                            <img
+                              src="/FlavorTrail/assets/thumbs-up-f10f5c7b.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="col-auto text-center">
+                          <button type="button" class="btn p-0">
+                            <span class="d-none d-lg-inline">留言</span>
+                            <img
+                              src="/FlavorTrail/assets/message-circle-b4637651.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="col-auto text-center">
+                          <button type="button" class="btn p-0">
+                            <span class="d-none d-lg-inline text-nowrap"
+                              >追蹤貼文</span
+                            >
+                            <img src="/FlavorTrail/assets/bell-881a3f6b.svg" alt="" />
+                          </button>
+                        </div>
+                        <div class="row my-4 gx-0 d-lg-none d-flex">
+                          <button type="button" class="btn btn-dark">
+                            <span>我要領取</span
+                            ><img src="/FlavorTrail/assets/hand-6366f248.svg" alt="" />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="d-none d-lg-block col-md-5 pt-3"
+                  style="height: 235.49px; width: 355px"
+                >
+                  <img
+                    src="/FlavorTrail/assets/post-4-6a83ffac.jpg"
+                    class="rounded-3 w-100 h-100"
+                    alt="..."
+                    style="object-fit: cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-dark floating-btn d-lg-none" style="width: 90%">
+          <span>我要領取</span><img src="/FlavorTrail/assets/hand-6366f248.svg" alt="" />
+        </button>
+      </div>
+    </div>
+    <!--頁尾區（不用弄）-->
+    <div class="container"></div>
+
+    
+  </body>
+</html>
