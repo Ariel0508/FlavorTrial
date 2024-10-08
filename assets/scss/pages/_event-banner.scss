@@ -1,0 +1,42 @@
+.event-banner {
+    &-cover {
+        width: 100%;
+        height: 351px;
+        object-fit: cover;
+        @include media-breakpoint-up(lg) {
+            height: 580px;
+        }
+    }
+    
+    &-header {
+        height: 221px;
+        @include media-breakpoint-up(lg) {
+            height: 234px;
+        }
+    }
+
+    &-intro__info {
+        svg  {
+            @include media-breakpoint-down(lg) {
+                width: 16px;
+                height: 16px;
+            }
+
+        }
+    }
+
+    &-title {
+        font-size: 40px;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 80px;
+        }
+    }
+
+    .banner-cta {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+}
