@@ -8,11 +8,12 @@
   <title>Flavor Trail - My Following</title>
 </head>
 <body>
+  <%- include('./layout/header'); -%>
   <%- include('./layout/account-nav.ejs', {currentTitle: '我的追蹤',page: 'account-following'}); %>
 
   <h2>我的追蹤頁面</h2>
 
-  
+  <%- include('./layout/footer'); -%>
   <script type="module" src="../main.js"></script>
 </body>
 

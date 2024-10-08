@@ -1,4 +1,5 @@
 .navbar {
+    z-index: 99;
     background-color: rgba(238, 238, 238, 0.70);
     backdrop-filter: blur(25px);
     transition: top 0.3s ease-in-out;
@@ -74,8 +75,8 @@
         bottom: 12px;
         right: 0;
         border-radius: 0;
-        z-index: 10000;
-        
+        z-index: 1046;
+
         &:focus {
             outline: none;
             box-shadow: none;
