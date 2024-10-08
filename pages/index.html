@@ -5,10 +5,16 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>index</title>
+  <title>Flavor Trail</title>
 </head>
 <body>
-  
+  <%- include('./layout/header'); %>
+  <%- include('./layout/rectangle-CTA', {currentCtaRectangleTitle: '立即報名', page: 'index'}) %>
+
+  <div class="container my-8 test">
+    <img src="/assets/images/home-1.jpg" alt="">
+  </div>
+  <%- include('layout/circle-CTA', {currentCtaTitle: '分享美味'}) %>
   <%- include('layout/footer') %>
   <script type="module" src="../main.js"></script>
 </body>
