@@ -28,7 +28,7 @@ const districts = {
 };
 
 citySelect.addEventListener('change', function () {
-    districtSelect.innerHTML = '<option value="">請選擇區域</option>';
+    districtSelect.innerHTML = '<option value="" disabled>請選擇區域</option>';
     const selectedCity = citySelect.value;
     if (districts[selectedCity]) {
         districts[selectedCity].forEach(function (district) {
