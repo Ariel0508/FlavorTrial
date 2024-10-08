@@ -6,11 +6,314 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Flavor Trail - My Following</title>
-  <script type="module" crossorigin src="/FlavorTrail/assets/marquee-4ce1e8fd.js"></script>
-  <link rel="stylesheet" href="/FlavorTrail/assets/marquee-0ef50509.css">
+  <script type="module" crossorigin src="/FlavorTrail/assets/marquee-4bce8dc2.js"></script>
+  <link rel="stylesheet" href="/FlavorTrail/assets/marquee-a85ee79a.css">
 </head>
 <body>
-  <nav class="account-nav navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg top-auto py-lg-0 position-fixed w-100 py-0" id="navbar">
+    <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand d-flex py-lg-0 d-lg-block d-none" href="index.html">
+            <img src="/FlavorTrail/assets/Logo-navbar-de581ad4.svg" alt="logo">
+        </a>
+
+        <!-- Toggler for mobile -->
+        <button class="navbar-toggler navbar-toggler-custom p-10 rounded-start-3" type="button" data-bs-toggle="offcanvas" href="#offcanvasNav" role="button" aria-controls="offcanvasNav" id="navbarToggler">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="burgerIcon" class="burger-icon">
+                <path d="M4 12H20M4 6H20M4 18H20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="closeIcon" class="d-none">
+                <path d="M18 6L6 18M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>     
+        </button>
+
+        <!-- Desktop menu -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav py-lg-7 mb-2 mb-lg-0 gap-lg-7">
+                <li class="nav-item">
+                    <a class="nav-link py-lg-3 px-lg-5" href="#">所有貼文</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link py-lg-3 px-lg-5" href="#">關於我們</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-lg-2 search-icon" href="#" type="button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 21L16.7 16.7M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </li>
+                <li class="nav-item border border-black" id="desktop-auth-button">
+                    <a href="login.html" class="nav-link nav-item-btn py-lg-3 px-lg-5">登入/註冊</a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Mobile menu (Offcanvas) -->
+        <div class="offcanvas offcanvas-start w-100 border-0 d-lg-none" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
+            <div class="offcanvas-header d-flex justify-content-between mb-12">
+                <h1 class="offcanvas-title" id="offcanvasNavLabel">
+                    <a href="index.html">
+                        <img src="/FlavorTrail/assets/Logo-navbar-de581ad4.svg" alt="logo">
+                    </a>
+                </h1>
+                <ul class="nav-item border border-black" id="mobile-auth-button">
+                    <a href="login.html" class="nav-link nav-item-btn py-3 px-5 fw-bold">登入/註冊</a>
+                </ul>
+            </div>
+            <ul class="offcanvas-body navbar-nav vh-100 pt-0">
+                <li class="nav-item mb-10">
+                    <ul class="search-form d-flex gap-2">
+                        <li class="input-group rounded-3 bg-white">
+                            <input class="form-control search-input py-2 px-5 bg-white" type="text" name="search" placeholder="附近美味">
+                            <a href="#" class="input-group-text border-0 bg-transparent py-2 ps-0 pe-5">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 21L16.7 16.7M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="dropdown position-relative">
+                            <button class="dropdown-btn d-flex align-items-center justify-content-between py-2 ps-5 pe-2 rounded-3 bg-white border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                地理位置
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="ms-5 dropdown-arrow">
+                                    <path d="M6 9L12 15L18 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                            
+                            </button>
+                            <ul class="dropdown-menu custom-dropdown-menu position-absolute w-100">
+                                <li><a class="dropdown-item" href="#">臺北市</a></li>
+                                <li><a class="dropdown-item" href="#">新北市</a></li>
+                                <li><a class="dropdown-item" href="#">桃園市</a></li>
+                                <li><a class="dropdown-item" href="#">臺中市</a></li>
+                                <li><a class="dropdown-item" href="#">臺南市</a></li>
+                                <li><a class="dropdown-item" href="#">高雄市</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <button class="dropdown-btn d-flex align-items-center justify-content-between py-2 ps-5 pe-2 rounded-3 bg-white border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                美食類型
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="ms-5 dropdown-arrow">
+                                    <path d="M6 9L12 15L18 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                            
+                            </button>
+                            <ul class="dropdown-menu custom-dropdown-menu position-absolute w-100">
+                                <li><a class="dropdown-item" href="#">主食</a></li>
+                                <li><a class="dropdown-item" href="#">甜點</a></li>
+                                <li><a class="dropdown-item" href="#">飲料</a></li>
+                                <li><a class="dropdown-item" href="#">水果</a></li>
+                                <li><a class="dropdown-item" href="#">零食</a></li>
+                                <li><a class="dropdown-item" href="#">熟食</a></li>
+                                <li><a class="dropdown-item" href="#">未烹飪食材</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item mb-10">
+                    <h2 class="fs-1 fw-bolder">
+                        <a class="nav-link p-0" href="#">分享美味</a>
+                    </h2>
+                </li>
+                <li class="nav-item mb-10">
+                    <h2 class="fs-1 fw-bolder">
+                        <a class="nav-link p-0" href="#">所有貼文</a>
+                    </h2>
+                </li>
+                <li class="nav-item">
+                    <h2 class="fs-1 fw-bolder">
+                        <a class="nav-link p-0" href="#">關於我們</a>
+                    </h2>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Search bar for desktop -->
+<div class="search d-none">
+    <div class="container">
+        <div class="search-bar row flex-nowrap position-relative">
+            <a class="navbar-brand col-md-auto col-lg-3 d-flex align-items-center" href="index.html">
+                <img src="/FlavorTrail/assets/Logo-navbar-de581ad4.svg" alt="logo">
+            </a>
+            <div class="search-content col-md-auto col-lg-8">
+                <ul class="search-form row py-7">
+                    <li class="input-group col-lg-6 col-xl-8 col-xxl-6 mb-5 mb-lg-0 rounded-3 bg-white">
+                        <input class="form-control search-input py-2 px-5 bg-white" type="text" name="search" placeholder="附近美味">
+                        <a href="#" class="input-group-text border-0 bg-transparent py-2 ps-0 pe-5">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 21L16.7 16.7M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="dropdown col-lg-3 col-xl-2 dropdown-padding-end">
+                        <button class="nav-link dropdown-btn d-flex align-items-center justify-content-between w-100 w-lg-auto py-2 ps-5 pe-2 rounded-3 bg-white" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            地理位置
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow">
+                                <path d="M6 9L12 15L18 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                            
+                        </button>
+                        <ul class="dropdown-menu custom-dropdown-menu">
+                            <li><a class="dropdown-item" href="#">臺北市</a></li>
+                            <li><a class="dropdown-item" href="#">新北市</a></li>
+                            <li><a class="dropdown-item" href="#">桃園市</a></li>
+                            <li><a class="dropdown-item" href="#">臺中市</a></li>
+                            <li><a class="dropdown-item" href="#">臺南市</a></li>
+                            <li><a class="dropdown-item" href="#">高雄市</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown col-lg-3 col-xl-2 dropdown-padding-start">
+                        <button class="nav-link dropdown-btn d-flex align-items-center justify-content-between w-100 w-lg-auto py-2 ps-5 pe-2 rounded-3 bg-white" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            美食類型
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="dropdown-arrow">
+                                <path d="M6 9L12 15L18 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                            
+                        </button>
+                        <ul class="dropdown-menu custom-dropdown-menu">
+                            <li><a class="dropdown-item" href="#">主食</a></li>
+                            <li><a class="dropdown-item" href="#">甜點</a></li>
+                            <li><a class="dropdown-item" href="#">飲料</a></li>
+                            <li><a class="dropdown-item" href="#">水果</a></li>
+                            <li><a class="dropdown-item" href="#">零食</a></li>
+                            <li><a class="dropdown-item" href="#">熟食</a></li>
+                            <li><a class="dropdown-item" href="#">未烹飪食材</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <a class="close-btn col-lg-1 d-flex flex-column align-items-center justify-content-center ms-2 bg-black rounded-bottom-3 text-white fw-bold">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="mb-2">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                關閉
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        /* 向下滾動 - 隱藏 navbar & 向上滾動 - 顯示 navbar */
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+        navbar.style.top = "0";
+        function handleNavbarScroll() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            navbar.style.top = (scrollTop > lastScrollTop) ? "-88px" : "0";
+            lastScrollTop = scrollTop;
+            
+            if (scrollTop > 40) {
+                navbarToggler.classList.add('scrolled-navbar-toggler');
+            } else {
+                navbarToggler.classList.remove('scrolled-navbar-toggler');
+            }
+        }
+        window.addEventListener('scroll', handleNavbarScroll);
+
+        /* 模擬登入後「登入/註冊」按鈕變成「我的帳號」下拉選單 */
+        const desktopAuthButton = document.getElementById('desktop-auth-button');
+        const mobileAuthButton = document.getElementById('mobile-auth-button');
+
+        function setLoggedInState() {
+            const accountMenuHTML = `
+                <li class="nav-item dropdown nav-account-menu">
+                    <a class="nav-link dropdown-toggle nav-dropdown-btn py-3 px-5 position-relative d-flex align-items-center" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        我的帳號
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-circle bg-primary p-1">
+                            <span class="visually-hidden">unread messages</span>
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu nav-dropdown-menu mt-1 border-0" aria-labelledby="accountDropdown">
+                        <li><a class="dropdown-item" href="#">我的主頁</a></li>
+                        <li><a class="dropdown-item" href="account-posts.html">我的發文</a></li>
+                        <li><a class="dropdown-item" href="account-notifications.html">全部通知</a></li>
+                        <li><a class="dropdown-item logout" href="login.html" id="logout">登出</a></li>
+                    </ul>
+                </li>
+            `;
+            
+            desktopAuthButton.innerHTML = accountMenuHTML;
+            mobileAuthButton.innerHTML = accountMenuHTML;
+
+            document.getElementById('logout').addEventListener('click', function () {
+                localStorage.removeItem('loggedIn');
+                window.location.reload(); 
+            });
+        } 
+        
+        function setLoggedOutState() {
+            const loginButtonHTML = `
+                <a href="login.html" class="nav-link nav-item-btn py-3 px-5 fw-bold">登入/註冊</a>
+            `;
+            desktopAuthButton.innerHTML = loginButtonHTML;
+            mobileAuthButton.innerHTML = loginButtonHTML;
+
+            desktopAuthButton.addEventListener('click', function () {
+                localStorage.setItem('loggedIn', true);
+            });
+            mobileAuthButton.addEventListener('click', function() {
+                localStorage.setItem('loggedIn', true);
+            })
+        }
+
+        let isLoggedIn = localStorage.getItem('loggedIn');
+        if (isLoggedIn) {
+            setLoggedInState();
+        } else {
+            setLoggedOutState();
+        }
+
+        /* 下拉選單上下箭頭切換 */
+        document.addEventListener('click', function (event) {
+            const isDropdownButton = event.target.closest('.dropdown-btn');
+            const dropdownArrows = document.querySelectorAll('.dropdown-arrow');
+
+            if (!isDropdownButton) {
+                dropdownArrows.forEach(arrow => {
+                    arrow.classList.remove('flip-arrow');
+                });
+            }
+        });
+
+        const dropdownButtons = document.querySelectorAll('.dropdown-btn');
+        
+        dropdownButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const dropdownArrow = event.currentTarget.querySelector('.dropdown-arrow');
+                dropdownArrow.classList.toggle('flip-arrow');
+            });
+        })
+
+        /* 切換 navbar 和 搜尋欄 */
+        const searchIcon = document.querySelector('.search-icon');
+        const searchBar = document.querySelector('.search');
+        const closeBtn = document.querySelector('.close-btn');
+
+        searchIcon.addEventListener('click', function () {
+            searchBar.classList.remove('d-none');  // 顯示搜尋欄
+            navbar.classList.add('d-none');  // 隱藏導航欄
+        });
+
+        closeBtn.addEventListener('click', function () {
+            searchBar.classList.add('d-none');  // 隱藏搜尋欄
+            navbar.classList.remove('d-none');  // 顯示導航欄
+        });
+
+        /* 切換漢堡圖標和關閉圖標 */
+        const navbarToggler = document.getElementById('navbarToggler');
+        const burgerIcon = document.getElementById('burgerIcon');
+        const closeIcon = document.getElementById('closeIcon');
+
+        function toggleIcons() {
+            burgerIcon.classList.toggle('d-none');
+            closeIcon.classList.toggle('d-none');
+            navbarToggler.classList.toggle('toggled');
+        };
+
+        navbarToggler.addEventListener('click', toggleIcons);
+    });
+
+    
+</script>  <nav class="account-nav navbar navbar-expand-lg">
     <div class="container">
       <!-- 桌面版的 navbar -->
       <ul class="navbar-nav d-lg-flex d-none justify-content-between mb-14">
@@ -167,7 +470,80 @@
 
   <h2>我的追蹤頁面</h2>
 
-  
+  <footer class="footer">
+    <div class="container">
+        <div class="footer-header d-flex flex-lg-row flex-column-reverse mb-lg-19 mb-16">
+            <a href="index.html" class="footer-logo">
+                <img src="/FlavorTrail/assets/Logo-367dc84c.png" alt="logo">
+            </a>
+            <div class="slogan ms-auto mt-lg-12 fs-2 fw-bolder lh-1">
+                <p>快樂齊分享，美味</p>
+                <p class="vertical-text text-lg-vertical ms-auto">再出發</p>
+            </div>
+        </div>
+        
+        <nav class="footer-nav row pb-lg-12 pb-7">
+            <div class="col-9">
+                <div class="row">
+                    <div class="footer-nav__category col-lg-3 mb-lg-0 mb-7">
+                        <a class="mb-4 text-gray-700 fs-6">認識餘味尋蹤</a>
+                        <ul class="d-flex flex-column gap-4 fs-4 fw-medium lh-xs">
+                            <li><a href="#" class="footer-nav__link">關於我們</a></li>
+                            <li><a href="#" class="footer-nav__link">人才招募</a></li>
+                            <li><a href="#" class="footer-nav__link">活動提案</a></li>
+                            <li><a href="#" class="footer-nav__link">連絡我們</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav__category col-lg-3 mb-lg-0 mb-7">
+                        <a class="mb-4 text-gray-700 fs-6">常見問題 FAQ</a>
+                        <ul class="d-flex flex-column gap-4 fs-4 fw-medium lh-xs">
+                            <li><a href="#" class="footer-nav__link">如何分享美食</a></li>
+                            <li><a href="#" class="footer-nav__link">如何領取美食</a></li>
+                            <li><a href="#" class="footer-nav__link">取消預約美食</a></li>
+                            <li><a href="#" class="footer-nav__link">忘記密碼</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav__category col-lg-3 mb-lg-0 mb-7">
+                        <a class="mb-4 text-gray-700 fs-6">會員中心</a>
+                        <ul class="d-flex flex-column gap-4 fs-4 fw-medium lh-xs">
+                            <li><a href="#" class="footer-nav__link">註冊/登入</a></li>
+                            <li><a href="#" class="footer-nav__link">我的帳戶</a></li>
+                            <li><a href="#" class="footer-nav__link">我要分享</a></li>
+                            <li><a href="#" class="footer-nav__link">我的收藏</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 d-lg-flex justify-content-end align-items-end">
+                <div class="footer-social d-flex flex-lg-row flex-column align-items-end gap-2">
+                    <a href="#" class="p-2">
+                        <img src="/FlavorTrail/assets/twitter-2290406c.svg" alt="twitter">
+                    </a>
+                    <a href="#" class="p-2">
+                        <img src="/FlavorTrail/assets/instagram-74936831.svg" alt="instagram">
+                    </a>
+                    <a href="#" class="p-2">
+                        <img src="/FlavorTrail/assets/facebook-62067057.svg" alt="facebook">
+                    </a>
+                    <a href="#" class="p-2">
+                        <img src="/FlavorTrail/assets/hugeicons_line-d0bbba6e.svg" alt="line">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="footer-bottom border-top-lg-0 border-top border-black">
+        <div class="container">
+            <div class="d-flex flex-lg-row flex-column justify-content-between py-7 border-top-lg border-lg-black">
+                <p class="mb-5">@ 2024 Flavor Trail</p>
+                <ul class="d-flex gap-7">
+                    <li><a href="#">網站使用需知</a></li>
+                    <li><a href="#">隱私權聲明</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
   
 </body>
 
