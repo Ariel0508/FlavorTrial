@@ -14,6 +14,9 @@
   </div>
   <%- include('./layout/notifyList'); -%>
   <%- include('./layout/footer'); -%>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script type="module" src="../../main.js"></script>
   <script>
     const citySelect = document.getElementById('city');
@@ -37,5 +40,51 @@ citySelect.addEventListener('change', function () {
     }
 });
   </script>
+  <script>
+    $(document).ready(function () {
+        function populateTimeOptions(ulElement) {
+            for (let hour = 0; hour < 24; hour++) {
+                for (let minute = 0; minute < 60; minute += 15) {
+                    let time = ('0' + hour).slice(-2) + ':' + ('0' + minute).slice(-2);
+                    ulElement.append('<li>' + time + '</li>');
+                }
+            }
+        }
+
+        populateTimeOptions($('#start-time'));
+        populateTimeOptions($('#end-time'));
+
+        $('#end-time').addClass('disabled');
+
+        $('#start-time').on('click', 'li', function () {
+            var selectedTime = $(this).text();
+            var input = $(this).closest('.dropdown').find('#time-range div');
+            input.data('start-time', selectedTime);
+            input.text(selectedTime + ' - ');
+
+            // 清空并重新填充结束时间选项  
+            var endTimeUl = $('#end-time');
+            endTimeUl.empty();
+            var [startHour, startMinute] = selectedTime.split(':').map(Number);
+            for (let hour = startHour; hour < 24; hour++) {
+                for (let minute = (hour === startHour ? startMinute + 15 : 0); minute < 60; minute += 15) {
+                    let time = ('0' + hour).slice(-2) + ':' + ('0' + minute).slice(-2);
+                    endTimeUl.append('<li>' + time + '</li>');
+                }
+            }
+            $('#end-time').removeClass('disabled');
+        });
+
+        $('#end-time').on('click', 'li', function () {
+            if (!$(this).closest('ul').hasClass('disabled')) {
+                var selectedTime = $(this).text();
+                var input = $(this).closest('.dropdown').find('#time-range div');
+                input.text(input.data('start-time') + ' - ' + selectedTime);
+                // 不再删除 start-time 数据  
+                // input.removeData('start-time'); // 删除这一行  
+            }
+        });
+    });      
+</script>
 </body>
 </html>
