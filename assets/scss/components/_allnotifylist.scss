@@ -47,3 +47,8 @@
 .pointer {
     cursor: pointer;
 }
+
+.notify-option:hover {
+    background-color: $primary;
+    color: white;
+}
