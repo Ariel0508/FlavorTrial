@@ -6,7 +6,7 @@
     @include media-breakpoint-down(lg) {
         background-color: white;
         backdrop-filter: none;
-      }
+    }
 
     &-collapse {
         flex-grow: 0;
@@ -130,19 +130,6 @@
         background-color: rgba(238, 238, 238, 0.70);
         backdrop-filter: blur(25px);
         z-index: -1;
-
-        @include media-breakpoint-up(lg) {
-            width: 89.3%;
-            border-radius: 0 0 8px 0;
-        }
-        @include media-breakpoint-up(xl) {
-            min-width: 84%;
-            border-radius: 0 0 8px 0;
-        }
-        @include media-breakpoint-up(xxl) {
-            width: 89.3%;
-            border-radius: 0 0 8px 0;
-        }
     }
 
     &::after {
@@ -156,16 +143,10 @@
         z-index: -2;
     }
 
-    &-form {
-        flex-wrap: wrap;
-        @include media-breakpoint-up(lg) {
-            flex-wrap: nowrap;
-        }
-    }
     .input-group {
         max-width: 590px;
-        flex: 1 1 auto;
     }
+    
     .dropdown {
         &-padding-end {
             padding-right: 6px;
