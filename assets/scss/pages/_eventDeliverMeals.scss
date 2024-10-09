@@ -1,0 +1,31 @@
+.event-deliver-meals {
+
+    .event-deliver-meals-title {
+        font-size: 64px;
+        font-weight: 900;
+         letter-spacing: -2.56px;
+         line-height: 1;
+         left: 12px;
+         top: 42%;
+         @include media-breakpoint-up(sm) {
+            left: 5%;
+            top: 48%;
+         }
+         @include media-breakpoint-up(md) {
+            left: 10%;
+         }
+         @include media-breakpoint-up(lg) {
+             left: 14%;
+             top: 42%;
+         }
+        @include media-breakpoint-up(xl) {
+          font-size: 80px;
+          letter-spacing: -3.2px;
+          left: 0;
+        }
+      }
+
+      .event-deliver-meals-img {
+        filter: brightness(0.7);
+      }
+}
