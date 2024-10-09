@@ -4,7 +4,7 @@
       <div class="modal-content">
         <div class="modal-header border-0 p-lg-7 py-7 px-4">
           <h1 class="modal-title fw-bolder lh-xs" id="ModalToggleLabel">申請通知</h1>
-          <img src="../../assets/images/icon/x.svg" alt="" class="ms-auto" data-bs-dismiss="modal" aria-label="Close">
+          <img src="../../assets/images/icon/x.svg" alt="" class="ms-auto pointer" data-bs-dismiss="modal" aria-label="Close">
         </div>
         <div class="modal-body p-lg-7 py-7 px-4">
             <div class="d-flex align-items-center mb-7">
@@ -28,7 +28,7 @@
       <div class="modal-content">
         <div class="modal-header border-0 p-lg-7 py-7 px-4">
             <h1 class="modal-title fw-bolder lh-xs" id="ModalToggleLabel">回覆申請通知</h1>
-            <img src="../../assets/images/icon/x.svg" alt="" class="ms-auto" data-bs-dismiss="modal" aria-label="Close">
+            <img src="../../assets/images/icon/x.svg" alt="" class="ms-auto pointer" data-bs-dismiss="modal" aria-label="Close">
         </div>
         <div class="modal-body p-lg-7">
           <form action="/replay" method="post">
@@ -46,10 +46,10 @@
                 <select id="city" name="city" class="form-select py-2 px-5 border-gray-400 rounded-3 d-inline-blok w-auto">
                     <option disabled>請選擇縣市</option>
                     <option value="taipei">台北市</option>
-                    <option value="newTaipei" selected>新北市</option>
+                    <option value="newTaipei" selected >新北市</option>
                 </select>
                 <select id="district" name="district" class="form-select py-2 px-5 border-gray-400 rounded-3">
-                    <option value="">新店區</option>
+                    <option value>新店區</option>
                 </select>
               </div>
               <input type="text" class="form-control py-2 px-5 border-gray-400 rounded-3" id="InputTitle" placeholder="玫瑰公園123號1樓">
@@ -97,7 +97,7 @@
       <div class="modal-content">
         <div class="modal-header border-0 p-lg-7 py-7 px-4">
             <h1 class="modal-title fw-bolder lh-xs" id="ModalToggleLabel">領取通知</h1>
-            <img src="../../assets/images/icon/x.svg" alt="" class="ms-auto" data-bs-dismiss="modal" aria-label="Close">
+            <img src="../../assets/images/icon/x.svg" alt="" class="ms-auto pointer" data-bs-dismiss="modal" aria-label="Close">
           </div>
           <div class="modal-body p-lg-7 py-7 px-4">
             <div class="d-flex align-items-center mb-7">
@@ -112,8 +112,21 @@
                 請記得帶上你的環保餐具，享受這美味的食物！如果有任何問題，請隨時聯繫我～～</p>
         </div>
         <div class="modal-footer py-7">
-          <button type="button" class="btn btn-primary">馬上領取</button>
+          <button type="button" class="btn btn-primary" id="liveToastBtn">馬上領取</button>
+        </div>
+        <div class="position-fixed top-0 end-0 p-3" style="z-index: 5">
+          <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+              <img src="../../assets/images/Logo.png" class="rounded me-2" alt="logo" style="width:20px ;height:20px">
+              <strong class="me-auto">已確認領取</strong>
+              <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+              請自行連絡分享者詳細領取時間。
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  

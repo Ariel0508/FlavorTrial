@@ -50,3 +50,9 @@
         }
     }
 }
+
+.display-lg-1 {
+    @media (min-width:768px) {
+        font-size: 80px;
+    }
+}

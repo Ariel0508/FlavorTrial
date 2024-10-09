@@ -8,12 +8,13 @@
   <title>Flavor Trail - My Posts</title>
 </head>
 <body>
+  <%- include('./layout/header'); -%>
   <%- include('./layout/account-nav.ejs', {currentTitle: '我的發文',page: 'account-posts'}); %>
 
   <h2>我的發文頁面</h2>
 
-  
-  <script type="module" src="../../main.js"></script>
+  <%- include('./layout/footer'); -%>
+  <script type="module" src="../main.js"></script>
 </body>
 
 </html>

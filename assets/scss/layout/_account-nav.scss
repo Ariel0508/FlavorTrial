@@ -1,4 +1,9 @@
 .account-nav {
+    margin-top: 32px;
+    background: #eee;
+    @include media-breakpoint-up(lg) {
+        margin-top: 88px;
+    }
     .navbar-nav {
         width: 100%;
     }

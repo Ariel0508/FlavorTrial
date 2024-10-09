@@ -16,3 +16,48 @@
         }
     }
 }
+
+.foodtalk-img {
+    height: 416px;
+    overflow: hidden;
+
+    img {
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .zongzi {
+        object-position: left top;
+    }
+}
+
+.display-lg-1 {
+    @media (min-width:768px) {
+        font-size: 80px;
+    }
+
+    span {
+        margin-left: 310px;
+    }
+}
+.foodtalk-title{
+    letter-spacing: -2.56px;
+
+    @media (min-width:768px) {
+        letter-spacing: -3.2px;
+    }
+}
+.talk-talk {
+    top: 70px;
+    left: 71px;
+    width: 171px;
+
+    @media (min-width:768px) {
+        top: -80px;
+        left: 415px;
+        width: 288px;
+        height: 218px;
+    }
+}

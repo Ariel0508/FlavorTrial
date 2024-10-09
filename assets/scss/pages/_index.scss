@@ -1,20 +1,5 @@
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #d23d3d;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+@import '/assets/scss/pages/index-intro.scss';
+@import '/assets/scss/pages/indexInvite.scss';
+@import '/assets/scss/pages/index-banner.scss';
+@import '/assets/scss/pages/indexAwesome.scss';
+@import '/assets/scss/pages/indexYummy.scss';

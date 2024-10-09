@@ -2,23 +2,24 @@
 <html lang="zh-hant">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flavor Trail - Notifications</title>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Flavor Trail - Notifications</title>
 </head>
 <body>
-  <%- include('./layout/account-nav.ejs', {currentTitle: '全部通知',page: 'account-notifications'}); %>
-  <div class="container">
+<%- include('./layout/header'); -%>
+<%- include('./layout/account-nav.ejs', {currentTitle: '全部通知',page: 'account-notifications'}); %>
+<div class="container">
     <h1 class="fw-bolder text-black mb-7 d-none d-lg-block">全部通知(這裡會換 mtt 的版本)</h1>
-  </div>
-  <%- include('./layout/notifyList'); -%>
-  <%- include('./layout/footer'); -%>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script type="module" src="../../main.js"></script>
-  <script>
+</div>
+<%- include('./layout/notifyList'); -%>
+<%- include('./layout/footer'); -%>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script type="module" src="../../main.js"></script>
+<script>
     const citySelect = document.getElementById('city');
 const districtSelect = document.getElementById('district');
 
@@ -39,8 +40,8 @@ citySelect.addEventListener('change', function () {
         });
     }
 });
-  </script>
-  <script>
+</script>
+<script>
     $(document).ready(function () {
         function populateTimeOptions(ulElement) {
             for (let hour = 0; hour < 24; hour++) {
@@ -85,6 +86,13 @@ citySelect.addEventListener('change', function () {
             }
         });
     });      
+</script>
+<script>
+    document.getElementById('liveToastBtn').addEventListener('click', function() {
+        const toastElement = document.getElementById('liveToast');
+        const toast = new bootstrap.Toast(toastElement, { delay: 5000 });
+        toast.show();
+    });
 </script>
 </body>
 </html>
