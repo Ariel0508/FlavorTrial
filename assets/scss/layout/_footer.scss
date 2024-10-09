@@ -6,10 +6,16 @@
         }
     }
 
-    .vertical-text {
-        writing-mode: vertical-rl; 
-        text-orientation: upright;
-        margin-block-start: 0;
-        margin-block-end: 0;
-      }
+    &-nav__link {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
+
+.vertical-text {
+    writing-mode: vertical-rl; 
+    text-orientation: upright;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
